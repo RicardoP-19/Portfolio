@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'BricolageGrotesque-VariableFont_opsz,wdth,wght';
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque-VariableFont_opsz,wdth,wght';
+  src: url('assets/fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kalam-Bold';
+  src: url('assets/fonts/Kalam-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kalam-Light';
+  src: url('assets/fonts/Kalam-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kalam-Regular';
+  src: url('assets/fonts/Kalam-Regular.ttf') format('truetype');
+}
