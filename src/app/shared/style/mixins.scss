@@ -1,0 +1,28 @@
+@import url('./colors.scss');
+
+@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin button-white($w: 12rem, $bc: $white, $c: $white, $ds: $white) {
+  width: $w;
+  height: 2.8rem;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 2rem;
+  border: 0.1rem solid $bc;
+  color: $c;
+  background-color: transparent;
+  filter: drop-shadow(2px 4px 6px rgba($ds, 1));
+  transition: all ease 0.2s;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translate(3px, 4px);
+    background-color: $orange;
+    filter: none;
+  }
+}
