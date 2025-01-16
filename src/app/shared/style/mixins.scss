@@ -1,19 +1,25 @@
 @import url('./colors.scss');
 
-@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+@mixin dFlex($jc: center, $ai: center, $g: 0rem) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
   gap: $g;
 }
 
+@mixin writing ($fs: 1.1rem, $fw: 400, $c: $black) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+
 @mixin button-white($w: 12rem, $bc: $white, $c: $white, $ds: $white) {
   width: $w;
   height: 2.8rem;
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 500;
   border-radius: 2rem;
-  border: 0.1rem solid $bc;
+  border: 1px solid $bc;
   color: $c;
   background-color: transparent;
   filter: drop-shadow(2px 4px 6px rgba($ds, 1));
@@ -21,8 +27,26 @@
   cursor: pointer;
   
   &:hover {
-    transform: translate(3px, 4px);
+    transform: translate(0.2rem, 0.3rem);
     background-color: $orange;
     filter: none;
   }
+}
+
+@mixin frame($md, $mv, $mt, $ms, $mp) {
+  position: absolute;
+  mask-image: linear-gradient(to $md, black 0%, black $mv, transparent $mt, transparent 100%);
+  -webkit-mask-image: linear-gradient(to $md, black 0%, black $mv, transparent $mt, transparent 100%);
+  mask-size: $ms;
+  -webkit-mask-size: $ms;
+  mask-position: $mp;
+  -webkit-mask-position: $mp;
+  transition: all 0.5s ease-out, -webkit-mask-position 0.5s ease-out;
+  visibility: hidden;
+}
+
+@mixin frame-hover($mp){
+  mask-position: $mp;
+  -webkit-mask-position: $mp;
+  visibility: visible;
 }

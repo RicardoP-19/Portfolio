@@ -1,0 +1,103 @@
+@import './../../style/mixins.scss';
+@import './../../style/colors.scss';
+
+header {
+  position: absolute;
+  width: 100%;
+  @include dFlex($jc: space-between, $g: 0px);
+  padding: 19px 72px 19px 72px;
+}
+
+.logo img{
+  width: 5rem;
+}
+
+.menu-links {
+  width: 100%;
+  @include dFlex($jc: space-evenly);
+  > div a {
+    @include writing($fw: 700, $c: $white);
+  }
+}
+
+.link-content {
+  @include dFlex();
+  .about-me-frame {
+    @include frame($md: bottom, $mv: 60%, $mt: 61%, $ms: 200% 500%, $mp: 0 100%);
+  }
+  .skills-frame {
+    @include frame($md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%);
+  }
+  .projects-frame {
+    @include frame($md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%);
+  }
+  .contact-frame {
+    @include frame($md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%);
+  }
+}
+
+.link-content:hover { 
+  .about-me-frame {
+  @include frame-hover($mp: 100% 50%);
+  }
+  .skills-frame {
+    @include frame-hover($mp: 0 0);
+  }
+  .projects-frame {
+    @include frame-hover($mp: 0 0);
+  }
+  .contact-frame {
+    @include frame-hover($mp: 0 0);
+  }
+}
+
+.language-wrapper {
+  @include dFlex($g: 1rem);
+  > div {
+    @include dFlex($jc:none);
+    position: relative;
+  }
+}
+
+.language-content {
+  @include dFlex();
+  >span {
+    @include writing($c:$white);
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+  }
+}
+
+.english-frame {
+  @include frame($md: top left, $mv: 50%, $mt: 51%, $ms: 200% 200%, $mp: 0 0);
+}
+
+.language-content:hover .english-frame {
+  @include frame-hover($mp: 100% 100%);
+}
+
+.german-frame {
+  @include frame($md: bottom right, $mv: 50%, $mt:51%, $ms: 200% 200%, $mp: 100% 100%);
+}
+
+.language-content:hover .german-frame {
+  @include frame-hover($mp: 0 0);
+}
+
+.selected {
+  @include writing($c:$orange !important);
+}
+
+.scrollball {
+  position: absolute;
+  transition: transform 0.3s ease; 
+}
+
+.scroll-left {
+  transform: translateX(0%);
+}
+
+.scroll-right {
+  transform: translateX(100%);
+}
