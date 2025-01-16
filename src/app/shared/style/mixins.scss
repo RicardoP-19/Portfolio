@@ -13,21 +13,23 @@
   color: $c;
 }
 
-@mixin button-white($w: 12rem, $bc: $white, $c: $white, $ds: $white) {
+@mixin button-white($w: 12rem, $bw: 1px 5px 4px 1px,  $bc: $white, $c: $white, $bgc: $black, $ds: $white) {
   width: $w;
   height: 2.8rem;
   font-size: 1.3em;
   font-weight: 500;
   border-radius: 2rem;
-  border: 1px solid $bc;
+  border-width: $bw;
+  border-style: solid;
+  border-color: $bc;
   color: $c;
-  background-color: transparent;
-  filter: drop-shadow(2px 4px 6px rgba($ds, 1));
+  background-color: $bgc;
   transition: all ease 0.2s;
   cursor: pointer;
   
   &:hover {
     transform: translate(0.2rem, 0.3rem);
+    border: 1px solid $white;
     background-color: $orange;
     filter: none;
   }

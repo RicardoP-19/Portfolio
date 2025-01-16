@@ -1,6 +1,8 @@
 @import './../../shared/style/colors.scss';
+@import './../../shared/style/mixins.scss';
 
 section {
+  @include dFlex();
   height: 100vh;
   background-image: url('./../../../assets/project_images_icons/background_images/background_top.png');
   background-position: bottom;
@@ -8,6 +10,49 @@ section {
   background-repeat: no-repeat;
 }
 
-// .content-wrapper {
+.content-wrapper {
+  width: 60%;
+  >div span {
+    @include writing($fs: 9rem, $fw: 700, $c: $white);
+  }
+}
 
-// }
+.content-inner-top {
+  @include dFlex($jc: center, $ai: none, $g: 5rem);
+}
+
+.headine-top {
+  @include dFlex($jc: center, $ai: none, $g: 0rem);
+  flex-direction: column;
+}
+
+.hello-animation {
+  @include dFlex($jc: center, $ai: none, $g: 0rem);
+  @include writing($fs: 1.1rem, $fw: 500, $c: $white);
+  width: 9.4rem;
+  border: 1px $white solid;
+  border-radius: 100px;
+  padding: 0.7rem;
+}
+
+.polaroid {
+  @include dFlex($jc: center, $ai: none, $g: 0rem);
+  transform: rotate(10deg);
+  padding-bottom: 3rem;
+}
+
+.person-picture {
+  position: absolute;
+  top: 15px;
+}
+
+.headine-bottom {
+  @include dFlex($jc: end, $ai: none, $g: 0rem);
+}
+
+.container-button {
+  @include dFlex($jc: end, $ai: none, $g: 0rem);
+  >button {
+    @include button-white();
+  }
+}
