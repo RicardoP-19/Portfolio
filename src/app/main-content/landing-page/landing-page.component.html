@@ -14,33 +14,35 @@
     <div class="content-inner-top">
       <div class="headine-top">
         <div class="hello-animation">Hello world</div>
-        <div>
-          <span>F</span>
-          <span>r</span>
-          <span>o</span>
-          <span>n</span>
-          <span>t</span>
-          <span>e</span>
-          <span>n</span>
-          <span>d</span>
+        <div class="headine-text">
+          @for (item of headlineText; track $index) {
+            @for (letter of item.noHoverFrontend; track $index) {
+              <p [ngClass]="{'text-color' : hoverIndexTop === $index}"  (mouseover)="mouseOverTop($index)" (mouseout)="mouseOutTop()">
+                {{ hoverIndexTop === $index ? item.hoverFrontend[$index] : letter }}
+              </p>
+            }
+          }
         </div>
       </div>
       <div class="polaroid">
+        <div>
+          <p>Ricardo</p>
+          <span>:)</span>
+          <span class="d-none">:D</span>
+        </div>
         <img src="./../../../assets/project_images_icons/polaroid/polaroid.png" alt="">
         <img class="person-picture" src="./../../../assets/project_images_icons/polaroid/person.png" alt=""> 
       </div>
     </div>
     <div>
-      <div class="headine-bottom">
-        <span>D</span>
-        <span>E</span>
-        <span>V</span>
-        <span>E</span>
-        <span>L</span>
-        <span>O</span>
-        <span>P</span>
-        <span>E</span>
-        <span>R</span>
+      <div class="headine-text">
+        @for (item of headlineText; track $index) {
+          @for (letter of item.noHoverDeveloper; track $index) {
+            <p [ngClass]="{'text-color' : hoverIndexBottom === $index}" (mouseover)="mouseOverBottom($index)" (mouseout)="mouseOutBottom()">
+              {{ hoverIndexBottom === $index ? item.hoverDeveloper[$index] : letter }}
+            </p>
+          }
+        }
       </div>
       <div class="container-button">
         <button>Get in Touch</button>
