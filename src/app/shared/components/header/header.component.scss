@@ -21,6 +21,7 @@ header {
 }
 
 .link-content {
+  @include cursor();
   @include dFlex();
   .about-me-frame {
     @include frame($md: bottom, $mv: 60%, $mt: 61%, $ms: 200% 500%, $mp: 0 100%);
@@ -63,7 +64,7 @@ header {
   @include dFlex();
   >span {
     @include writing($c:$white);
-    cursor: pointer;
+    @include cursor();
     position: relative;
     z-index: 999;
   }
