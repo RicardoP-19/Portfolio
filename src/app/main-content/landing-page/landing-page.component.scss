@@ -2,7 +2,7 @@
 @import './../../shared/style/mixins.scss';
 
 section {
-  @include dFlex();
+  @include d-flex();
   height: 100vh;
   background-image: url('./../../../assets/project_images_icons/background_images/background_top.png');
   background-position: bottom;
@@ -11,13 +11,13 @@ section {
 }
 
 .main {
-  @include dFlex();
+  @include d-flex();
   @include max-content();
   height: 100%;
 }
 
 .links-wrapper {
-  @include dFlex($jc: end, $ai: none);
+  @include d-flex($jc: end, $ai: none);
   flex-direction: column;
   position: relative;
   left: 3rem;
@@ -53,11 +53,11 @@ section {
 }
 
 .content-inner-top {
-  @include dFlex($jc: center, $ai: none, $g: 5rem);
+  @include d-flex($jc: center, $ai: none, $g: 5rem);
 }
 
 .headine-top {
-  @include dFlex($jc: center, $ai: none, $g: 1.5rem);
+  @include d-flex($jc: center, $ai: none, $g: 1.5rem);
   flex-direction: column;
 }
 
@@ -67,7 +67,7 @@ section {
 }
 
 .hello-content {
-  @include dFlex($jc: center, $ai: center, $g: 0rem);
+  @include d-flex($jc: center, $ai: center, $g: 0rem);
   @include writing($fs: 1.1rem, $fw: 500, $c: $white);
   width: 9.4rem;
   border: 1px $white solid;
@@ -109,7 +109,7 @@ section {
 }
 
 .headine-text {
-  @include dFlex($jc: center, $ai: center, $g: 0.5rem);
+  @include d-flex($jc: center, $ai: center, $g: 0.5rem);
   > p {
     margin: 0;
     @include writing($fs: 7rem, $fw: 700, $c: $white);
@@ -121,11 +121,11 @@ section {
 }
 
 .polaroid {
-  @include dFlex($jc: center, $ai: none, $g: 0rem);
+  @include d-flex($jc: center, $ai: none, $g: 0rem);
   transform: rotate(10deg);
   margin-bottom: 3rem;
   >div {
-    @include dFlex($jc: center, $ai: center, $g: 0.5em);
+    @include d-flex($jc: center, $ai: center, $g: 0.5em);
     @include writing($fs: 1.5rem, $fw: 700, $c: $black);
     font-family: 'Kalam-Bold';
     position: absolute;
@@ -141,11 +141,11 @@ section {
 }
 
 .headine-bottom {
-  @include dFlex($jc: end, $ai: none, $g: 0rem);
+  @include d-flex($jc: end, $ai: none, $g: 0rem);
 }
 
 .container-button {
-  @include dFlex($jc: end, $ai: none, $g: 0rem);
+  @include d-flex($jc: end, $ai: none, $g: 0rem);
   width: 67%;
   padding-top: 1em;
   >button {
