@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 
-@mixin dFlex($jc: center, $ai: center, $g: 0rem) {
+@mixin d-flex($jc: center, $ai: center, $g: 0rem) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;

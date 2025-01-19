@@ -4,12 +4,12 @@
 header {
   position: absolute;
   width: 100%;
-  @include dFlex($jc: center, $g: 0px);
+  @include d-flex($jc: center, $g: 0px);
   padding: 19px 72px 19px 72px;
 }
 
 .main {
-  @include dFlex();
+  @include d-flex();
   @include max-content()
 }
 
@@ -19,7 +19,7 @@ header {
 
 .menu-links {
   width: 100%;
-  @include dFlex($jc: space-evenly);
+  @include d-flex($jc: space-evenly);
   > div a {
     @include writing($fw: 700, $c: $white);
   }
@@ -27,7 +27,7 @@ header {
 
 .link-content {
   @include cursor();
-  @include dFlex();
+  @include d-flex();
   .about-me-frame {
     @include frame($md: bottom, $mv: 60%, $mt: 61%, $ms: 200% 500%, $mp: 0 100%);
   }
@@ -58,15 +58,15 @@ header {
 }
 
 .language-wrapper {
-  @include dFlex($g: 1rem);
+  @include d-flex($g: 1rem);
   > div {
-    @include dFlex($jc:none);
+    @include d-flex($jc:none);
     position: relative;
   }
 }
 
 .language-content {
-  @include dFlex();
+  @include d-flex();
   >span {
     @include writing($c:$white);
     @include cursor();
