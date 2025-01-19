@@ -1,5 +1,5 @@
 <section>
-  <div class="content-wrapper">
+  <div class="main">
     <div class="links-wrapper">
       <a href="#" target="_blank" class="link">
         <img src="./../../../assets/project_images_icons/icons/top_area/linkedin.png" alt="Linkedin">
@@ -11,44 +11,46 @@
         <img src="./../../../assets/project_images_icons/icons/top_area/mail.png" alt="Mail">
       </a>
     </div>
-    <div class="content-inner-top">
-      <div class="headine-top">
-        <div class="hello-content">
-          <span>Hello world</span>
-          <img src="./../../../assets/project_images_icons/icons/top_area/waving_hand.svg" alt="">
+    <div [ngStyle]="{'flex': '1'}">
+      <div class="content-inner-top">
+        <div class="headine-top">
+          <div class="hello-content">
+            <span>Hello world</span>
+            <img src="./../../../assets/project_images_icons/icons/top_area/waving_hand.svg" alt="">
+          </div>
+          <div class="headine-text">
+            @for (item of headlineText; track $index) {
+              @for (letter of item.noHoverFrontend; track $index) {
+                <p [ngClass]="{'text-color' : hoverIndexTop === $index}"  (mouseover)="mouseOverTop($index)" (mouseout)="mouseOutTop()">
+                  {{ hoverIndexTop === $index ? item.hoverFrontend[$index] : letter }}
+                </p>
+              }
+            }
+          </div>
         </div>
+        <div class="polaroid" (mouseover)="mouseOverPhoto()" (mouseout)="mouseOutPhoto()">
+          <div>
+            <p>Ricardo</p>
+            <span [ngClass]="{'d-none': isHovered}">:)</span>
+            <span [ngClass]="{'d-none': !isHovered}">:D</span>
+          </div>
+          <img src="./../../../assets/project_images_icons/polaroid/polaroid.png" alt="">
+          <img class="person-picture" src="./../../../assets/project_images_icons/polaroid/person.png" alt=""> 
+        </div>
+      </div>
+      <div>
         <div class="headine-text">
           @for (item of headlineText; track $index) {
-            @for (letter of item.noHoverFrontend; track $index) {
-              <p [ngClass]="{'text-color' : hoverIndexTop === $index}"  (mouseover)="mouseOverTop($index)" (mouseout)="mouseOutTop()">
-                {{ hoverIndexTop === $index ? item.hoverFrontend[$index] : letter }}
+            @for (letter of item.noHoverDeveloper; track $index) {
+              <p [ngClass]="{'text-color' : hoverIndexBottom === $index}" (mouseover)="mouseOverBottom($index)" (mouseout)="mouseOutBottom()">
+                {{ hoverIndexBottom === $index ? item.hoverDeveloper[$index] : letter }}
               </p>
             }
           }
         </div>
-      </div>
-      <div class="polaroid" (mouseover)="mouseOverPhoto()" (mouseout)="mouseOutPhoto()">
-        <div>
-          <p>Ricardo</p>
-          <span [ngClass]="{'d-none': isHovered}">:)</span>
-          <span [ngClass]="{'d-none': !isHovered}">:D</span>
+        <div class="container-button">
+          <button>Get in Touch</button>
         </div>
-        <img src="./../../../assets/project_images_icons/polaroid/polaroid.png" alt="">
-        <img class="person-picture" src="./../../../assets/project_images_icons/polaroid/person.png" alt=""> 
-      </div>
-    </div>
-    <div>
-      <div class="headine-text">
-        @for (item of headlineText; track $index) {
-          @for (letter of item.noHoverDeveloper; track $index) {
-            <p [ngClass]="{'text-color' : hoverIndexBottom === $index}" (mouseover)="mouseOverBottom($index)" (mouseout)="mouseOutBottom()">
-              {{ hoverIndexBottom === $index ? item.hoverDeveloper[$index] : letter }}
-            </p>
-          }
-        }
-      </div>
-      <div class="container-button">
-        <button>Get in Touch</button>
       </div>
     </div>
   </div>
