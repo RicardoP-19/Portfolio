@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 export class LandingPageComponent {
   hoverIndexTop: number | null = null;
   hoverIndexBottom: number | null = null;
+  isHovered = false;
 
   headlineText = [  
     {
@@ -35,5 +36,13 @@ export class LandingPageComponent {
 
   mouseOutBottom() {
     this.hoverIndexBottom = null;
+  }
+
+  mouseOverPhoto() {
+    this.isHovered = true;
+  }
+
+  mouseOutPhoto() {
+    this.isHovered = false;
   }
 }
