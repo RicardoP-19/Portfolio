@@ -22,7 +22,7 @@
   color: $c;
 }
 
-@mixin button-white($w: 12rem, $bw: 1px 5px 4px 1px,  $bc: $white, $c: $white, $bgc: $black, $ds: $white) {
+@mixin button-white($w: 12rem, $bw: 1px 5px 4px 1px,  $bc: $white, $c: $white, $bgc: $black, $hbc: $white, $hc: $black) {
   width: $w;
   height: 2.8rem;
   font-size: 1.3em;
@@ -34,18 +34,18 @@
   color: $c;
   background-color: $bgc;
   transition: all ease 0.2s;
-  cursor: pointer;
-  
+  cursor: pointer;  
   &:hover {
     transform: translate(0.2rem, 0.3rem);
-    border: 1px solid $white;
+    color: $hc;
+    border: 1px solid $hbc;
     background-color: $orange;
     filter: none;
   }
 }
 
-@mixin frame($md, $mv, $mt, $ms, $mp) {
-  position: absolute;
+@mixin frame($p, $md, $mv, $mt, $ms, $mp, $v) {
+  position: $p;
   mask-image: linear-gradient(to $md, black 0%, black $mv, transparent $mt, transparent 100%);
   -webkit-mask-image: linear-gradient(to $md, black 0%, black $mv, transparent $mt, transparent 100%);
   mask-size: $ms;
@@ -53,7 +53,7 @@
   mask-position: $mp;
   -webkit-mask-position: $mp;
   transition: all 0.4s ease-out, -webkit-mask-position 0.4s ease-out;
-  visibility: hidden;
+  visibility: $v;
 }
 
 @mixin frame-hover($mp){
