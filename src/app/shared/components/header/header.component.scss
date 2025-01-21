@@ -29,16 +29,16 @@ header {
   @include cursor();
   @include d-flex();
   .about-me-frame {
-    @include frame($md: bottom, $mv: 60%, $mt: 61%, $ms: 200% 500%, $mp: 0 100%);
+    @include frame($p: absolute, $md: bottom, $mv: 60%, $mt: 61%, $ms: 200% 500%, $mp: 0 100%, $v: hidden);
   }
   .skills-frame {
-    @include frame($md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%);
+    @include frame($p: absolute, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%, $v: hidden);
   }
   .projects-frame {
-    @include frame($md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%);
+    @include frame($p: absolute, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%, $v: hidden);
   }
   .contact-frame {
-    @include frame($md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%);
+    @include frame($p: absolute, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%, $v: hidden);
   }
 }
 
@@ -76,7 +76,7 @@ header {
 }
 
 .english-frame {
-  @include frame($md: top left, $mv: 50%, $mt: 51%, $ms: 200% 200%, $mp: 0 0);
+  @include frame($p: absolute, $md: top left, $mv: 50%, $mt: 51%, $ms: 200% 200%, $mp: 0 0, $v: hidden);
 }
 
 .language-content:hover .english-frame {
@@ -84,7 +84,7 @@ header {
 }
 
 .german-frame {
-  @include frame($md: bottom right, $mv: 50%, $mt:51%, $ms: 200% 200%, $mp: 100% 100%);
+  @include frame($p: absolute, $md: bottom right, $mv: 50%, $mt:51%, $ms: 200% 200%, $mp: 100% 100%, $v: hidden);
 }
 
 .language-content:hover .german-frame {
