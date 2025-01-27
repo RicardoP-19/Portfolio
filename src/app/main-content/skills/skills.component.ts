@@ -9,20 +9,20 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class SkillsComponent {
 
-  firstLineSkills = [
-    './../../../assets/project_images_icons/icons/skills/html.png',
-    './../../../assets/project_images_icons/icons/skills/css.png',
-    './../../../assets/project_images_icons/icons/skills/js.png',
-    './../../../assets/project_images_icons/icons/skills/ts.png',
-    './../../../assets/project_images_icons/icons/skills/angular.png',
+  frontendSkillsTop = [
+    {path: './assets/project_images_icons/icons/skills/html.png', name: 'HTML'},
+    {path: './assets/project_images_icons/icons/skills/css.png', name: 'CSS'},
+    {path: './assets/project_images_icons/icons/skills/js.png', name: 'Javascript'},
+    {path: './assets/project_images_icons/icons/skills/ts.png', name: 'Typescript'},
+    {path: './assets/project_images_icons/icons/skills/angular.png', name: 'Angular'}
   ]
 
-  secondLineSkills = [
-    './../../../assets/project_images_icons/icons/skills/firebase.png',
-    './../../../assets/project_images_icons/icons/skills/git.png',
-    './../../../assets/project_images_icons/icons/skills/api.png',
-    './../../../assets/project_images_icons/icons/skills/scrum.png',
-    './../../../assets/project_images_icons/icons/skills/material-design.png',
+  frontendSkillsBottom = [
+    {path: './assets/project_images_icons/icons/skills/firebase.png', name: 'Firebase'},
+    {path: './assets/project_images_icons/icons/skills/git.png', name: 'Git'},
+    {path: './assets/project_images_icons/icons/skills/api.png', name: 'Rest-Api'},
+    {path: './assets/project_images_icons/icons/skills/scrum.png', name: 'Scrum'},
+    {path: './assets/project_images_icons/icons/skills/material-design.png', name: 'Material-Design'}
   ]
 
   @ViewChild('stickerTop') stickerTop!: ElementRef;
