@@ -11,32 +11,23 @@ section {
 }
 
 .main {
-  @include d-flex($g: 3rem);
+  @include d-flex($ai: start, $g: 7rem);
   @include max-content();
-  flex-direction: column;
-  padding: 0rem 10rem;
-}
-
-.skill-wrapper-top {
-  @include d-flex($jc: start, $ai: center, $g: 0rem);
-  width: 100%;
-  > div div span {
-    @include d-flex($jc: end);
-    color: $white;
-  }
 }
 
 .skill-set-wrapper {
   @include writing($fs: 1.1rem, $fw: 400, $c: $white);
+  height: 100%;
 }
 
 .my-stack {
+  height: 100%;
   text-align: end;
   padding-bottom: 1em
 }
 
 .skill-set {
-  @include d-flex();
+  height: 100%;
   > svg {
     position: absolute;
   } >span {
@@ -45,10 +36,32 @@ section {
   }
 }
 
+.skill-animation {
+  @include frame($p: none, $md: left, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 0 0, $v: visibility);
+  animation: skill 2.5s infinite ease-in-out;
+}
+
+@keyframes skill {
+  0% {
+    @include frame-hover($mp: 0 0);
+  }
+  50% {
+    @include frame-hover($mp: 100% 100%);
+  }
+  100% {
+    @include frame-hover($mp: 0 0);
+  }
+}
+
+.skills-container {
+  @include d-flex($jc: end, $ai: start, $g: 4rem);
+  flex-direction: column;
+}
+
 .skill-text {
   @include d-flex();
   @include writing();
-  width: 44em;
+  padding: 0.7em;
   height: 6.3em;
   background-image: url('./../../../assets/project_images_icons/ripped_papers/skills/description_paper.png');
   background-position: center;
@@ -56,19 +69,25 @@ section {
   background-repeat: no-repeat;
 }
 
-.skill-wrapper-bottom {
-  @include d-flex($jc: end, $ai: none, $g: 4rem);
-  width: 100%;
+.skills-wrapper {
+  @include d-flex($jc: center, $ai: center, $g: 3rem);
 }
 
 .skill-icons {
-  @include d-flex($jc: center, $ai: center, $g: 2rem);
+  @include d-flex($jc: center, $ai: center, $g: 3rem);
   flex-direction: column;
   > div {
-    @include d-flex($jc: none, $ai: none, $g: 2rem);
-  } > div img {
+    @include d-flex($jc: center, $ai: center, $g: 4rem);
+    @include writing($c: $white);
+  }
+}
+
+.skill-icon-name {
+  @include d-flex($jc: center, $ai: center, $g: 0rem);
+  flex-direction: column;
+  > img {
     filter: grayscale(1);
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease;
     &:hover {
       filter: grayscale(0);
       transform: scale(0.8);
