@@ -7,8 +7,6 @@ section {
 }
 
 .main {
-  @include max-content();
-  @include d-flex();
   padding: 4rem;
   > div {
     width: 50%;
