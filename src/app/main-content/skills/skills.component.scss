@@ -12,7 +12,6 @@ section {
 
 .main {
   @include d-flex($ai: start, $g: 7rem);
-  @include max-content();
 }
 
 .skill-set-wrapper {

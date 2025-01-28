@@ -1,0 +1,120 @@
+@import './../../shared/style/colors.scss';
+@import './../../shared/style/mixins.scss';
+
+section {
+  @include d-flex();
+}
+
+.main {
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.project-wrapper-top {
+  @include d-flex();
+  > div {
+    width: 50%;
+  }
+}
+
+.project-wrapper-bottom {
+  @include d-flex();
+  > div {
+    width: 50%;
+  }
+}
+
+.my-craft-text {
+  @include d-flex($jc: none, $ai: none, $g: 3rem);
+  flex-direction: column;
+  > div {
+    @include d-flex($jc: none, $ai: none, $g: 1rem);
+    @include writing($fs: 1.1rem, $fw: 500, $c: $black);
+    flex-direction: column;
+  } 
+}
+
+.projects-text-wrapper {
+  @include d-flex($jc: none, $ai: none, $g: 0.2rem);
+  @include writing($fs: 4rem, $fw: 700, $c: $black);
+  flex-direction: column;
+}
+
+.projects-text-animation {
+  @include frame($p: none, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 0 0, $v: visibility);
+  animation: projects-text 2.5s infinite ease-in-out;
+}
+
+@keyframes projects-text {
+  0% {
+    @include frame-hover($mp: 0 0);
+  }
+  50% {
+    @include frame-hover($mp: 100% 100%);
+  }
+  100% {
+    @include frame-hover($mp: 0 0);
+  }
+}
+
+.project-wrapper {
+  height: 23rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('./../../../assets/project_images_icons/images/el_pollo_loco.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.2rem;
+}
+
+.button-wrapper {
+  position: relative;
+  height: 100%;
+  > div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border-top-left-radius: 20px;
+  }
+}
+
+.button-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  bottom: 3.5em;
+  right: 0;
+  box-shadow: 10px 10px 0 white;
+  border-radius: 50%;
+}
+
+.button-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  bottom: 0;
+  right: 12.6em;
+  box-shadow: 10px 10px 0 white;
+  border-radius: 50%;
+}
+
+.button-container {
+  background-color: white;
+  >button {
+    @include button-white($bc: $black, $c: $black, $bgc: $white, $hbc: $black, $hc: $white);
+  }
+}
+
+.project-title {
+  @include writing($fs: 1.5rem, $fw: 700, $c: $black);
+}

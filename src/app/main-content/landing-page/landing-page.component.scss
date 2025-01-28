@@ -11,8 +11,6 @@ section {
 }
 
 .main {
-  @include d-flex();
-  @include max-content();
   height: 100%;
 }
 
