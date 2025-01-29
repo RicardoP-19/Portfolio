@@ -57,17 +57,9 @@ section {
   }
 }
 
-.project-wrapper {
-  height: 23rem;
-}
-
 .project-image {
   width: 100%;
-  height: 100%;
-  background-image: url('./../../../assets/project_images_icons/images/el_pollo_loco.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: auto;
   border-radius: 1.2rem;
 }
 
@@ -80,31 +72,31 @@ section {
     right: 0;
     border-top: 10px solid white;
     border-left: 10px solid white;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 1.2rem;
   }
 }
 
 .button-wrapper::before {
   content: "";
   position: absolute;
-  height: 1.5em;
-  width: 1.5em;
+  height: 2em;
+  width: 2.4em;
   background-color: transparent;
-  bottom: 3.5em;
+  bottom: 3.4em;
   right: 0;
-  box-shadow: 10px 10px 0 white;
+  box-shadow: 20px 13px 0 white;
   border-radius: 50%;
 }
 
 .button-wrapper::after {
   content: "";
   position: absolute;
-  height: 1.5em;
-  width: 1.5em;
+  height: 2em;
+  width: 2.4em;
   background-color: transparent;
-  bottom: 0;
+  bottom: 0.25em;
   right: 12.6em;
-  box-shadow: 10px 10px 0 white;
+  box-shadow: 12px 15px 0 white;
   border-radius: 50%;
 }
 
@@ -116,5 +108,5 @@ section {
 }
 
 .project-title {
-  @include writing($fs: 1.5rem, $fw: 700, $c: $black);
+  @include writing($fs: 1.7rem, $fw: 700, $c: $black);
 }
