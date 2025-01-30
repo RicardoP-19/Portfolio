@@ -23,22 +23,40 @@
         </span>
       </div>
       <div>
-        <div>
-          <div>
-            <img class="project-image" src="./../../../assets/project_images_icons/images/el_pollo_loco.png" alt="">
-            <div class="button-wrapper">
-              <div class="button-container">
-                <button>Project details</button>
+        @for (item of frontendProjects; track $index) {
+          @if ($index == 0) {
+            <div>
+              <img class="project-image" src="{{item.path}}" alt="">
+              <div class="button-wrapper">
+                <div class="button-container">
+                  <button>Project details</button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div>
-          <p class="project-title">El Pollo Loco</p>
-          <span>
-            Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.
-          </span>
-        </div>
+            <div>
+              <p class="project-title">{{item.title}}</p>
+              <span>{{item.description}}</span>
+            </div>
+          }
+        }
+      </div>
+    </div>
+    <div>
+      <div class="project-wrapper-bottom">
+        @for (item of frontendProjects; track $index+1) {
+          @if ($index > 0) {
+            <div>
+              <img class="project-image" src="{{item.path}}" alt="">
+              <div class="button-wrapper">
+                <div class="button-container">
+                  <button>Project details</button>
+                </div>
+              </div>
+              <p class="project-title">{{item.title}}</p>
+              <span>{{item.description}}</span>
+            </div>
+          }
+        }
       </div>
     </div>
   </div>

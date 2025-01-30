@@ -7,18 +7,19 @@ section {
 
 .main {
   flex-direction: column;
+  gap: 6rem;
   padding: 4rem;
 }
 
 .project-wrapper-top {
-  @include d-flex();
+  @include d-flex($g: 2rem);
   > div {
     width: 50%;
   }
 }
 
 .project-wrapper-bottom {
-  @include d-flex();
+  @include d-flex($ai: start, $g: 3rem);
   > div {
     width: 50%;
   }
