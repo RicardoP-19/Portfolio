@@ -1,0 +1,154 @@
+@import './../../../shared/style/colors.scss';
+@import './../../../shared/style/mixins.scss';
+
+section {
+  @include d-flex();
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  overflow-y: auto;
+}
+
+.overlay-background {
+  @include d-flex($jc: center, $g: 1.5rem);
+  flex-direction: column;
+  background-image: url('./../../../../assets/project_images_icons/background_images/note_book_paper.png');
+  background-position: 0;
+  background-size: cover;
+  background-color: #1D1D1D;
+  height: 100%;
+  // width: 100%;
+  max-width: 1920px;
+}
+
+// .overlay-header {
+//   width: 100%;
+// }
+
+.overlay-wrapper {
+  @include d-flex($jc: center, $ai: none);
+  flex-direction: column;
+  height: 100%;
+  padding: 0 4.5rem;
+}
+
+.go-back {
+  @include d-flex($jc: start, $ai: center, $g: 1rem);
+  padding-left: 1.1rem;
+  cursor: pointer;
+  > span {
+    @include writing($fs: 1.1rem, $fw: 700, $c: $black);
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.overlay-content {
+  @include d-flex($jc: space-between, $g: 6rem);
+  padding: 0.5rem 3rem;
+}
+
+.content-left {
+  width: 50%;
+  padding: 1rem 0;
+}
+
+.content-headline {
+  @include writing($fs: 4rem, $fw: 700);
+  margin: 0;
+}
+
+.headline-animation {
+  @include frame($p: none, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 0 0, $v: visibility);
+  animation: headlineAnimation 2.5s infinite ease-in-out;
+}
+
+@keyframes headlineAnimation {
+  0% {
+    @include frame-hover($mp: 0 0);
+  }
+  50% {
+    @include frame-hover($mp: 100% 100%);
+  }
+  100% {
+    @include frame-hover($mp: 0 0);
+  }
+}
+
+.project-infos {
+  @include d-flex($ai: start, $g: 1rem);
+  flex-direction: column;
+  width: 80%;
+  padding-top: 1.3rem;
+}
+
+.info-text {
+  > p {
+    @include writing($fs: 1.5rem, $fw: 700);
+    margin: 0;
+  } > span {
+    @include writing($fs: 1.1rem, $fw: 400);
+  }
+}
+
+.duration {
+  @include d-flex($g: 0.5rem);
+  > p {
+    @include writing($fs: 1.1rem, $fw: 700);
+  } > span {
+    @include writing($fs: 1.1rem, $fw: 400);
+  }
+}
+
+.skills-used {
+  @include d-flex($jc: start, $g: 0.3rem);
+  > img {
+    width: 1.5em;
+    height: 1.5em;
+  } > p {
+    margin: 0;
+  }
+}
+
+.content-right {
+  @include d-flex($g: 3rem);
+  flex-direction: column;
+  width: 50%;
+  > img {
+    width: 100%;
+    border-radius: 20px;
+  } > div {
+    @include d-flex($jc: end, $g:1.7rem);
+    width: 100%;
+  } > div button {
+    @include button-white($w: 8rem, $hc: $white);
+  }
+}
+
+.change-project {
+  @include d-flex($jc: space-between);
+  padding: 0 1.1rem;
+  width: 100%;
+  > div {
+    @include d-flex($ai: center, $g: 1rem);
+    cursor: pointer;
+  }
+}
+
+.back {
+  @include writing($fs: 1.1rem, $fw: 700, $c: $black);
+  &:hover {
+    color: $orange;
+  }
+}
+
+.next {
+  @include writing($fs: 1.1rem, $fw: 700, $c: $white);
+  &:hover {
+    color: $yellow;
+  }
+}

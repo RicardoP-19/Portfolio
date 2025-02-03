@@ -1,29 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { OverlayComponent } from "./overlay/overlay.component";
+import { Project } from '../interfaces/project.interface';
+import { ProjectService } from '../../shared/services/project.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [OverlayComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
 
-  frontendProjects= [
-    {
-      path: './assets/project_images_icons/images/pokedex.png',
-      title: 'Pokedex',
-      description: 'Ein Pokédex, der die PokéAPI nutzt, um detaillierte Informationen zu Pokémon wie Typ, Fähigkeiten, Attacken und Entwicklungen abzurufen und übersichtlich darzustellen. Ideal für Trainer und Fans.'
-    },
-    {
-      path: './assets/project_images_icons/images/join.png',
-      title: 'Join',
-      description: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.'
-    },
-    {
-      path: './assets/project_images_icons/images/el_pollo_loco.png',
-      title: 'El Pollo Loco',
-      description: 'Spring-, Lauf- und Wurfspiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.'
-    }
-  ]
+export class ProjectsComponent {
+  projectService = inject(ProjectService);
+  selectedProject: Project | null = null;
+
+  openOverlay(index:number) {
+    this.selectedProject = this.projectService.projects[index];
+    document.body.style.overflow = 'hidden';
+  }
 }

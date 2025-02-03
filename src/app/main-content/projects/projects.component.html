@@ -1,3 +1,4 @@
+<app-overlay [project]="selectedProject"></app-overlay>
 <section>
   <div class="main">
     <div class="project-wrapper-top">
@@ -23,13 +24,13 @@
         </span>
       </div>
       <div>
-        @for (item of frontendProjects; track $index) {
+        @for (item of projectService.frontendProjects; track $index) {
           @if ($index == 0) {
             <div>
               <img class="project-image" src="{{item.path}}" alt="">
               <div class="button-wrapper">
                 <div class="button-container">
-                  <button>Project details</button>
+                  <button (click)="openOverlay($index)">Project details</button>
                 </div>
               </div>
             </div>
@@ -43,13 +44,13 @@
     </div>
     <div>
       <div class="project-wrapper-bottom">
-        @for (item of frontendProjects; track $index+1) {
+        @for (item of projectService.frontendProjects; track $index+1) {
           @if ($index > 0) {
             <div>
               <img class="project-image" src="{{item.path}}" alt="">
               <div class="button-wrapper">
                 <div class="button-container">
-                  <button>Project details</button>
+                  <button (click)="openOverlay($index)">Project details</button>
                 </div>
               </div>
               <p class="project-title">{{item.title}}</p>
