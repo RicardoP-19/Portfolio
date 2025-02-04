@@ -17,11 +17,12 @@ export class OverlayComponent {
   @Input() project: Project | null = null;
 
   nextProject() {
+    debugger
     this.project = this.projectService.nextProject();
   }
 
-  previousProject() {
-    this.project = this.projectService.previousProject();
+  backProject() {
+    this.project = this.projectService.backProject ();
   }
 
   closeOverlay() {

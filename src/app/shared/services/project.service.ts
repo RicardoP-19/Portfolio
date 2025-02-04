@@ -28,7 +28,7 @@ export class ProjectService {
       path: './assets/project_images_icons/images/join.png',
       overlay: './assets/project_images_icons/images/join_white.png',
       description: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
-      implementation: 'In unserem Teamprojekt Join haben wir einen Aufgabenmanager entwickelt. Die Webanwendung wurde mit HTML, CSS und JavaScript entwickelt und nutzt Firebase zur Speicherung und Verwaltung der Daten. Zur Versionskontrolle und Zusammenarbeit haben wir Git verwendet.',
+      implementation:'Die Webanwendung wurde mit HTML, CSS und JavaScript realisiert und nutzt Firebase, um Aufgaben und Daten in Echtzeit zu speichern und zu verwalten. Über Drag & Drop können Aufgaben zwischen verschiedenen Kategorien verschoben und Benutzern zugewiesen werden. Nutzer können Aufgaben erstellen, organisieren und effizient verwalten. Mit Git haben wir die Versionskontrolle und Zusammenarbeit im Team koordiniert. Dieses Projekt zeigt meine Fähigkeit, komplexe Anwendungen zu entwickeln und im Team effektiv zusammenzuarbeiten.',
       duration: '5 Weeks',
       skills: [
         {path: './assets/project_images_icons/icons/skills/html.png', name: 'HTML'},
@@ -66,7 +66,7 @@ export class ProjectService {
     return this.frontendProjects[this.projectIndex];
   }
 
-  previousProject(): Project {
+  backProject(): Project {
     this.projectIndex--;
     if (this.projectIndex < 0) {
       this.projectIndex = this.frontendProjects.length - 1;
