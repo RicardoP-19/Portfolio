@@ -1,0 +1,46 @@
+@import './../../shared/style/colors.scss';
+@import './../../shared/style/mixins.scss';
+
+section {
+  @include d-flex();
+  flex-direction: column;
+  background-image: url('./../../../assets/project_images_icons/background_images/background_bottom.png');
+  background-position: top;
+  background-size: cover;
+}
+
+.main {
+  padding: 7rem 4rem 0;
+  color: white;
+  >div {
+    width: 50%;
+  }
+}
+
+.contact-me-wrapper {
+  @include d-flex($g: 3rem);
+  flex-direction: column;
+  > div:nth-child(1) {
+    @include d-flex($ai: none, $g: 1rem);
+    flex-direction: column;
+    width: 100%;
+    > p {
+      @include writing($fs: 1.2rem, $fw: 500, $c: $white);
+    } > span {
+      @include writing($fs: 4rem, $fw: 700, $c: $white);
+    }
+  } 
+  > div:nth-child(2) > span {
+    @include d-flex($g: 1rem);
+    @include writing($fs: 1.2rem !important, $fw: 400 !important, $c: $white);
+  } 
+  > div:nth-child(3) {
+    @include d-flex($jc: end);
+    width: 100%;
+  }
+}
+
+.contact-me-animation {
+  @include frame($p: none, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 0 0, $v: visibility);
+  @include animation();
+}

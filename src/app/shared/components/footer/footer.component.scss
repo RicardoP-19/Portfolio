@@ -1,0 +1,67 @@
+@import './../../style/colors.scss';
+@import './../../style/mixins.scss';
+
+footer {
+  @include d-flex();
+  width: 100vw;
+}
+
+.main {
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.owner-container {
+  @include d-flex($ai: start, $g: 1.2rem);
+  @include writing($fs: 1.1rem, $fw: 700, $c: $white);
+  flex-direction: column;
+  > div img {
+    width: 4em;
+  }
+}
+
+.legal-notice-container {
+  @include cursor();
+  @include d-flex();
+  position: relative;
+  > a {
+    color: white;
+  }
+  .legal-notice-frame {
+    @include frame($p: absolute, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%, $v: hidden);
+    top: 0.6rem;
+  }
+}
+
+.legal-notice-container:hover {
+  .legal-notice-frame {
+    @include frame-hover($mp: 0 0);
+  }
+}
+
+.footer-links {
+  @include d-flex($jc: center, $ai: center, $g: 0rem);
+  @include writing($fs: 1.1rem, $fw: 500, $c: $white);
+  width: 7rem;
+  border-radius: 100px;
+  padding: 0.3rem;
+  > a {
+    position: absolute;
+  } 
+  > img {
+    position: relative;
+    left: 0.7em;
+    bottom: 2.1em;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  } 
+  &:hover {
+    background-image: url('./../../../../assets/project_images_icons/icons/top_area/blue_stripe.svg');
+    background-position: center;
+    > img {
+      opacity: 1;
+      transform: translateX(100%) rotate(360deg);
+    }
+  }
+}

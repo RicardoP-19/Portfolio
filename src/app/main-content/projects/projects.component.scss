@@ -43,19 +43,7 @@ section {
 
 .projects-text-animation {
   @include frame($p: none, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 0 0, $v: visibility);
-  animation: projects-text 2.5s infinite ease-in-out;
-}
-
-@keyframes projects-text {
-  0% {
-    @include frame-hover($mp: 0 0);
-  }
-  50% {
-    @include frame-hover($mp: 100% 100%);
-  }
-  100% {
-    @include frame-hover($mp: 0 0);
-  }
+  @include animation();
 }
 
 .project-image {

@@ -26,7 +26,8 @@ section {
   > img {
     width: 2em;
     transform: rotate(-5deg);
-  } > span {
+  } 
+  > span {
     color: $white;
     transform: rotate(-5deg);
   }
@@ -41,7 +42,8 @@ section {
   height: 10rem;
   > img {
     width: 2em;
-  } > span {
+  } 
+  > span {
     color: $white;
   }
 }
@@ -52,7 +54,8 @@ section {
   > p {
     @include writing($fs: 1.1rem, $fw: 500, $c: $black);
     margin: 0;
-  } > span {
+  } 
+  > span {
     @include writing($fs: 1.1rem, $fw: 400, $c: $black);
   }
 }
@@ -66,19 +69,7 @@ section {
 
 .about-me-animation {
   @include frame($p: none, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 0 0, $v: visibility);
-  animation: moveMask 2.5s infinite ease-in-out;
-}
-
-@keyframes moveMask {
-  0% {
-    @include frame-hover($mp: 0 0);
-  }
-  50% {
-    @include frame-hover($mp: 100% 100%);
-  }
-  100% {
-    @include frame-hover($mp: 0 0);
-  }
+  @include animation();
 }
 
 .container-button {
