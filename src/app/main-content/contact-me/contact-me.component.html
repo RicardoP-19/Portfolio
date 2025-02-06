@@ -30,8 +30,67 @@
           </svg>          
         </div>
     </div>
-    <div>
-        E-MAIl
+    <div class="email-wrapper">
+      <div class="sticker-wrapper">
+        <div class="sticker-content">
+          @for (letter of stickerText; track $index) {
+            <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerText.length) -90) + 'deg) translateY(-70px)'}">
+              {{letter}}
+            </p>
+          }
+          @for (letter of stickerText; track $index) {
+            <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerText.length) -270) + 'deg) translateY(-70px)'}">
+              {{letter}}
+            </p>
+          }
+          <img src="./../../../assets/project_images_icons/logo/RP_blue.png" alt="logo">
+        </div>
+      </div>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="inputs-wrapper">
+          <hr class="d-none">
+          <div [ngStyle]="{padding: '1rem 1.4rem'}">
+            <label for="name">What's your name?</label>
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name goes here" required>
+            @if (!name.valid && name.touched) {
+              <span>Oops! it seems your name is missing</span>
+            }
+          </div>
+          <hr>
+          <div [ngStyle]="{padding: '1rem 1.4rem'}">
+            <label for="email">What`s your email?</label>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            @if (!email.valid && email.touched) {
+              <span>Hoppla! your email is required</span>
+            }
+          </div>
+          <hr>
+          <div [ngStyle]="{padding: '1rem 1.4rem 0rem'}">
+            <label for="message">How can I help you?</label>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Hello Ricardo, I am interested in.." required></textarea>
+            @if (!message.valid && message.touched) {
+              <span>What do you need to develop?</span>
+            }
+          </div>
+          <hr>
+        </div>
+        <div class="checkbox-send-wrapper">
+          <div class="checkbox">
+            <div>              
+              <input type="checkbox" name="" id="">
+            </div>
+            <div>
+              <span>
+                I've read the <a  href="#">privacy policy</a> and agree to the processing of my data as outlined.
+              </span>
+            </div>
+          </div>
+          <div class="send-button">
+            <!-- <input type="submit" value="Submit"> -->
+             <button [disabled]="isDisabled">Send</button>
+          </div> 
+        </div>  
+      </form>
     </div>
   </div>
   <app-footer></app-footer>
