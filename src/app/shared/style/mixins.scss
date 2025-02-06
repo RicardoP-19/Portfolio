@@ -61,3 +61,19 @@
   -webkit-mask-position: $mp;
   visibility: visible;
 }
+
+@mixin animation ($t: 2.5s) {
+  animation: moveMask $t infinite ease-in-out;
+}
+
+@keyframes moveMask {
+  0% {
+    @include frame-hover($mp: 0 0);
+  }
+  50% {
+    @include frame-hover($mp: 100% 100%);
+  }
+  100% {
+    @include frame-hover($mp: 0 0);
+  }
+}
