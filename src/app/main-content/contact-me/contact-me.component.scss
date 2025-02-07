@@ -146,6 +146,10 @@ hr {
   }
 }
 
+.checkbox-img {
+  cursor: pointer;
+}
+
 .send-button {
   @include d-flex($jc: end);
   width: 100%;

@@ -56,4 +56,8 @@ export class ContactMeComponent {
       ngForm.resetForm();
     }
   }
+
+  checkboxHover() {
+    return true;
+  }
 }

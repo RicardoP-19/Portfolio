@@ -120,22 +120,35 @@ section {
 
 .polaroid {
   @include d-flex($jc: center, $ai: none, $g: 0rem);
+  background-image: url('./../../../assets/project_images_icons/polaroid/polaroid.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 13rem;
+  height: 15rem;
   transform: rotate(10deg);
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
+  filter: grayscale(1);
+  &:hover {
+    filter: grayscale(0);
+  }
   >div {
     @include d-flex($jc: center, $ai: center, $g: 0.5em);
     @include writing($fs: 1.5rem, $fw: 700, $c: $black);
     font-family: 'Kalam-Bold';
     position: absolute;
     bottom: 0;
-  } p {
-    margin: 0;
+    > p {
+      margin: 0;
+    }
   }
-}
-
-.person-picture {
-  position: absolute;
-  top: 15px;
+  > img {
+    position: absolute;
+    top: 15px;
+    width: 11rem;
+    height: 11rem;
+    object-fit: cover;
+  }
 }
 
 .headine-bottom {
