@@ -101,7 +101,7 @@ form {
       }
     }
     > input ,textarea {
-      @include writing($fs: 1.1rem, $fw: 400, $c: $white);
+      @include writing($fs: 1.1rem, $fw: 400, $c: $yellow);
       width: 70%;
       border: none;
       background-color: transparent;
@@ -109,7 +109,6 @@ form {
       &:focus {
         border: none;
         outline: none;
-        color: $yellow;
       }
     }
     > textarea {
@@ -125,6 +124,11 @@ form {
   }
 }
 
+input:-webkit-autofill {
+  -webkit-text-fill-color: $yellow !important;
+  background-clip: text !important;
+}
+
 hr {
   border: 1px solid $yellow;
   width: 100%;
@@ -133,6 +137,12 @@ hr {
 .checkbox-send-wrapper {
   @include d-flex($ai: none, $g: 2rem);
   flex-direction: column;
+}
+
+.checkbox-container {
+  @include d-flex($jc: space-between, $ai: start, $g:1rem);
+  flex-direction: column;
+  height: 4rem;
 }
 
 .checkbox {
@@ -148,6 +158,9 @@ hr {
 
 .checkbox-img {
   cursor: pointer;
+  &:hover {
+    filter: drop-shadow(0px 0px 7px white);
+  }
 }
 
 .send-button {
@@ -155,5 +168,14 @@ hr {
   width: 100%;
   > button {
     @include button-white($w: 10rem, $bgc: transparent, $hc: $white);
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      &:disabled:hover {
+        transform: none !important;
+        border-width: 1px 5px 4px 1px;
+        background-color: transparent;
+      }
+    }
   }
 }
