@@ -5,6 +5,7 @@ import { log } from 'console';
 import { ignoreElements } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import path from 'path';
 
 @Component({
   selector: 'app-contact-me',
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
-  isDisabled: boolean = true;
+  isChecked: boolean = false;
+  reviewCheck: boolean = false;
   stickerText = ' Ricardo Pinto - Frontend Developer -'.split('');
   
   http = inject(HttpClient);
@@ -57,7 +59,10 @@ export class ContactMeComponent {
     }
   }
 
-  checkboxHover() {
-    return true;
+  check() {
+    if (this.isChecked) {
+      this.reviewCheck = true;
+    }
+    this.isChecked = !this.isChecked;
   }
 }

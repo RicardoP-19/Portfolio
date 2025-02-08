@@ -51,7 +51,7 @@
           <hr class="d-none">
           <div [ngStyle]="{padding: '1rem 1.4rem'}">
             <label for="name">What's your name?</label>
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name goes here" required>
+            <input  #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name goes here" required>
             @if (!name.valid && name.touched) {
               <span>Oops! it seems your name is missing</span>
             }
@@ -75,20 +75,31 @@
           <hr>
         </div>
         <div class="checkbox-send-wrapper">
-          <div class="checkbox">
-            <div> 
-              <img class="checkbox-img" (mouseover)="checkboxHover()" src="{{src}}" alt="">             
-              <input type="checkbox" name="" id="" hidden>
+          <div class="checkbox-container">
+            <div class="checkbox">
+              <div class="checkbox-img">
+                @if (!isChecked) {
+                  <img (click)="check()" src="../../../assets/project_images_icons/contact-mail/void.png" alt="">
+                } @else if (isChecked) {
+                  <img (click)="check()" src="./../../../assets/project_images_icons/contact-mail/checked.png" alt="">
+                }
+                <input type="checkbox" name="isChecked" [(ngModel)]="isChecked" hidden>
+              </div>
+              <div>
+                <span>
+                I've read the <a  href="#">privacy policy</a> and agree to the processing of my data as outlined.
+                </span>
+              </div>
             </div>
             <div>
-              <span>
-                I've read the <a  href="#">privacy policy</a> and agree to the processing of my data as outlined.
-              </span>
+              @if (!isChecked && reviewCheck) {
+                <span [ngStyle]="{'color': '#FF3A00'}">Please accept the privacy policy</span>
+              }
             </div>
           </div>
           <div class="send-button">
             <!-- <input type="submit" value="Submit"> -->
-             <button [disabled]="isDisabled">Send</button>
+             <button type="submit" [disabled]="!contactForm.valid || !isChecked">Send</button>
           </div> 
         </div>  
       </form>
