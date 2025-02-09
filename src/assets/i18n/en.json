@@ -1,0 +1,74 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "LANDING_PAGE": {
+    "HELLO": "Hello world",
+    "BUTTON": "Get in Touch"
+  },
+  "ABOUT_ME": {
+    "BASE": "Based in Erding",
+    "WORK": "Open to work remote",
+    "WHO": "WHO'S RICARDO",
+    "ABOUT_ME": "About me",
+    "TEXT": "Hi, I'm Ricardo, a frontend-developer with a passion for seamless and engaging digital experiences. Whether it's designing user-friendly interfaces, solving technical challenges or bringing creative ideas to life, I love turning concepts into reality with clean and efficient code. With a keen eye for design and an enthusiasm for modern web technologies, I focus on creating solutions that are not only functional but also visually appealing.",
+    "FINISH_TEXT": "Let's create something great together!",
+    "BUTTON": "Let's talk"
+  },
+  "SKILLS": {
+    "MY_STACK": "MY STACK",
+    "SKILL_SET": "Skill set",
+    "TEXT": "I have gained experience in building projects with a variety of frontend technologies and concepts. With a strong growth mindset, I'm always exploring new areas to enhance my skill set.",
+    "STICKER_TEXT": " Pull to peel",
+    "INTERESE_TEXT": "Also, I`m interested in diving into:"
+  },
+  "PROJECTS": {
+    "MY_CRAFT": "MY CRAFT",
+    "TITLE": "Projects",
+    "TEXT": "Take a look at some of my projects and see my frontend skills in action. Each project highlights my approach to building responsive, user-friendly designs with efficient code.",
+    "BUTTON": "Project details",
+    "OVERLAY": {
+      "DESCRIPTION": "Description",
+      "DETAILS": "Implementation Details",
+      "DURATION": "Duration",
+      "BACK_BUTTON": "Back Project",
+      "NEXT_BUTTON": "Next Project"
+    }
+  },
+  "COLLEAGUE_REVIEWS": {
+    "TITLE": "IN THEIR WORDS",
+    "THOUGHTS": "Colleagues' Thoughts",
+    "CARD_LEFT": "Working with Ricardo on our training projects was really great. You could always rely on him. He was very motivated and gave me and the team great support and inspiration. The collaboration was very pleasant and I really appreciate the fact that I was able to work with him.",
+    "CARD_CENTER": "Ricardo was always communicative and brought new perspectives to our projects with his creative ideas. His ability to look at complex problems from different angles inspired the team and helped to find solutions. He also impressed us with his clear and precise communication, which promoted productive collaboration. Ricardo was a great asset to our team.",
+    "CARD_RIGHT": "Ricardo always demonstrated a clear focus throughout the entire collaboration and always kept his eye on the goal. His ambition and solution-oriented approach motivated the group and helped us to make efficient progress. Thank you for your valuable commitment!",
+    "JOB": "Frontend Developer"
+  },
+  "CONTACT_ME": {
+    "ME": "CONTACT ME",
+    "TITLE": "Ready to work together?",
+    "TEXT_TOP": "Feel free to contact me using this form - I look forward to hearing from you! Share your ideas and project requirements with me and let's create something great together.",
+    "TEXT_BOTTOM": "Whether it's a website, web application or a customised digital solution - I bring my knowledge and experience to bear to implement your vision in the best possible way. I look forward to hearing from you!",
+    "FORM": {
+      "NAME": "What's your name?",
+      "NAME_PLACEHOLDER": "Your name goes here",
+      "NAME_PLACEHOLDER_ERROR": "Oops! it seems your name is missing",
+      "EMAIL": "What`s your email?",
+      "EMAIL_PLACEHOLDER": "youremail@email.com",
+      "EMAIL_PLACEHOLDER_ERROR": "Hoppla! your email is required",
+      "TEXTAREA": "How can I help you?",
+      "TEXTAREA_PLACEHOLDER": "Hello Ricardo, I am interested in..",
+      "TEXTAREA_PLACEHOLDER_ERROR": "What do you need to develop?",
+      "CHECKBOX_FIRST_TEXT": "I've read the",
+      "CHECKBOX_PRIVACY": " privacy policy ",
+      "CHECKBOX_END_TEXT": "and agree to the processing of my data as outlined.",
+      "CHECKBOX_TEXT_ERROR": "Please accept the privacy policy",
+      "BUTTON": "Send"
+    }
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Legal Notice"
+  }
+}

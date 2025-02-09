@@ -1,0 +1,75 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "Über Mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontakt"
+  },
+  "LANDING_PAGE": {
+    "HELLO": "Hallo Welt",
+    "BUTTON": "Kontaktaufnahme"
+  },
+  "ABOUT_ME": {
+    "BASE": "Sitz in Erding",
+    "WORK": "Offen für Fernarbeit",
+    "WHO": "WER IST RICARDO",
+    "ABOUT_ME": "Über mich",
+    "TEXT": "Hallo, ich bin Ricardo, ein Frontend-Entwickler mit einer Leidenschaft für nahtlose und ansprechende digitale Erlebnisse. Ob es darum geht, benutzerfreundliche Oberflächen zu entwerfen, technische Herausforderungen zu lösen oder kreative Ideen zum Leben zu erwecken, ich liebe es, Konzepte mit sauberem und effizientem Code in die Realität umzusetzen. Mit einem scharfen Auge für Design und einer Begeisterung für moderne Webtechnologien konzentriere ich mich darauf, Lösungen zu schaffen, die nicht nur funktional, sondern auch optisch ansprechend sind.",
+    "FINISH_TEXT": "Lassen Sie uns gemeinsam etwas Großartiges schaffen!",
+    "BUTTON": "Reden wir"
+  },
+  "SKILLS": {
+    "MY_STACK": "MEIN STAPEL",
+    "SKILL_SET": "Skill set",
+    "TEXT": "Ich habe Erfahrung in der Erstellung von Projekten mit einer Vielzahl von Frontend-Technologien und Konzepten gesammelt. Mit einer starken Wachstumsmentalität, erforsche ich immer neue Bereiche, um meine Fähigkeiten zu verbessern.",
+    "STICKER_TEXT": " Hier ziehen",
+    "INTERESE_TEXT": "Auch bereit zu lernen:"
+  },
+  "PROJECTS": {
+    "MY_CRAFT": "MEIN HANDWERK",
+    "TITLE": "Projekte",
+    "TEXT": "Werfen Sie einen Blick auf einige meiner Projekte und sehen Sie meine Frontend-Fähigkeiten in Aktion. Jedes Projekt unterstreicht meine Herangehensweise an die Erstellung responsiver, benutzerfreundlicher Designs mit effizientem Code.",
+    "BUTTON": "Projekt details",
+    "OVERLAY": {
+      "DESCRIPTION": "Beschreibung",
+      "DETAILS": "Details zur Umsetzung",
+      "DURATION": "Dauer",
+      "BACK_BUTTON": "Züruck",
+      "NEXT_BUTTON": "Nächstes"
+    }
+  },
+  "COLLEAGUE_REVIEWS": {
+    "TITLE": "In Ihren Worten",
+    "THOUGHTS": "Kollegen Gedanken",
+    "CARD_LEFT": "Die Zusammenarbeit mit Ricardo in den Projekten unserer Weiterbildung war wirklich super. Auf ihn konnte man sich jederzeit verlassen. Er war sehr motiviert und hat sowohl mich als auch das Team super unterstützt und inspiriert. Die Zusammenarbeit war sehr angenehm, und ich schätze es sehr, dass ich mit ihm zusammenarbeiten durfte.",
+    "CARD_CENTER": "Ricardo hat sich stets kommunikativ eingebracht und durch seine kreativen Ideen neue Perspektiven in unsere Projekte eingebracht. Seine Fähigkeit, komplexe Probleme aus unterschiedlichen Blickwinkeln zu betrachten, hat das Team inspiriert und die Lösungsfindung vorangetrieben. Zudem überzeugte er durch seine klare und präzise Kommunikation, die eine produktive Zusammenarbeit förderte. Ricardo war ein großer Gewinn für unser Team.",
+    "CARD_RIGHT": "Ricardo hat während der gesamten Zusammenarbeit stets einen klaren Fokus bewiesen und immer das Ziel im Blick behalten. Sein Ehrgeiz und seine Lösungsorientierung haben die Gruppe motiviert und dazu beigetragen, effizient voranzukommen. Danke für deinen wertvollen Einsatz!",
+    "JOB": "Frontend Entwickler"
+  },
+  "CONTACT_ME": {
+    "ME": "Kontakt",
+    "TITLE": "Bereit zur Zusammenarbeit?",
+    "TEXT_TOP": "Kontaktieren Sie mich gerne über dieses Formular – ich freue mich darauf, von Ihnen zu hören! Teilen Sie Ihre Ideen und Projektanforderungen mit mir, und lassen Sie uns gemeinsam etwas Großartiges erschaffen.",
+    "TEXT_BOTTOM": "Ob Website, Webanwendung oder eine maßgeschneiderte digitale Lösung – ich bringe mein Wissen und meine Erfahrung ein, um Ihre Vision bestmöglich umzusetzen. Ich freue mich auf Ihre Nachricht!",
+    "FORM": {
+      "NAME": "Wie ist dein Name?",
+      "NAME_PLACEHOLDER": "Ihr Name wird hier eingetragen",
+      "NAME_PLACEHOLDER_ERROR": "Ups! Es scheint, dass Ihr Name fehlt",
+      "EMAIL": "Wie lautet Ihre E-Mail?",
+      "EMAIL_PLACEHOLDER": "youremail@email.com",
+      "EMAIL_PLACEHOLDER_ERROR": "Hoppla! Ihre E-Mail ist erforderlich",
+      "TEXTAREA": "Wie kann ich Ihnen helfen?",
+      "TEXTAREA_PLACEHOLDER": "Hallo Ricardo, ich bin interessiert an...",
+      "TEXTAREA_PLACEHOLDER_ERROR": "Was müssen Sie entwickeln?",
+      "CHECKBOX_FIRST_TEXT": "Ich habe die",
+      "CHECKBOX_PRIVACY": " Datenschutzbestimmungen ",
+      "CHECKBOX_END_TEXT": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+      "CHECKBOX_TEXT_ERROR": "Bitte akzeptieren Sie die Datenschutzbestimmungen",
+      "BUTTON": "Senden"
+    }    
+  }
+  ,
+  "FOOTER": {
+    "LEGAL_NOTICE": "Impressum"
+  }
+}

@@ -1,10 +1,8 @@
 <section [ngClass]="{ 'd-none': !project }">
   <div class="overlay-background">
-    <!-- <app-header class="overlay-header"></app-header> -->
     <div class="overlay-wrapper">
-      <div class="go-back">
-        <img src="./../../../../assets/project_images_icons/arrows/arrow_red.png" alt="Back">
-        <span (click)="closeOverlay()">Go Back</span>
+      <div class="close-overlay">
+        <img (click)="closeOverlay()" src="./../../../../assets/project_images_icons/mobile/close_white.png" alt="Close">
       </div>
       <div class="overlay-content">
         <div class="content-left">
@@ -34,16 +32,28 @@
           </div>
           <div class="project-infos">
             <div class="info-text">
-              <p>Description</p><br>
-              <span>{{project?.description}}</span>
+              <p>{{ 'PROJECTS.OVERLAY.DESCRIPTION' | translate }}</p><br>
+              @if(translate.currentLang == 'en') {
+                <span>{{project?.descriptionEn}}</span>
+              } @else if (translate.currentLang == 'de') {
+                <span>{{project?.descriptionDe}}</span>
+              }
             </div>
             <div class="info-text">
-              <p>Implementation Details</p><br>
-              <span>{{project?.implementation}}</span>
+              <p>{{ 'PROJECTS.OVERLAY.DETAILS' | translate }}</p><br>
+              @if(translate.currentLang == 'en') {
+                <span>{{project?.implementationEn}}</span>
+              } @else if (translate.currentLang == 'de') {
+                <span>{{project?.implementationDe}}</span>
+              }
             </div>
             <div class="duration">
-              <p>Duration:</p>
-              <span>{{project?.duration}}</span>
+              <p>{{ 'PROJECTS.OVERLAY.DURATION' | translate }}:</p>
+              @if(translate.currentLang == 'en') {
+                <span>{{project?.durationEn}}</span>
+              } @else if (translate.currentLang == 'de') {
+                <span>{{project?.durationDe}}</span>
+              }
             </div>
             <div class="skills-used">
               @for (skills of project?.skills; track $index) {
@@ -74,10 +84,10 @@
       <div class="change-project">
         <div class="back" (click)="backProject()">
           <img src="./../../../../assets/project_images_icons/arrows/arrow_red.png" alt="Back">
-          <span>Back Project</span>
+          <span>{{ 'PROJECTS.OVERLAY.BACK_BUTTON' | translate }}</span>
         </div>
         <div class="next" (click)="nextProject()">
-          <span>Next Project</span>
+          <span>{{ 'PROJECTS.OVERLAY.NEXT_BUTTON' | translate }}</span>
           <img src="./../../../../assets/project_images_icons/arrows/arrow_yellow.png" alt="Forward">
         </div>
       </div>

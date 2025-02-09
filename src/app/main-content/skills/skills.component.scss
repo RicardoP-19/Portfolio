@@ -43,16 +43,20 @@ section {
 .skills-container {
   @include d-flex($jc: end, $ai: start, $g: 4rem);
   flex-direction: column;
+  > div {
+    @include d-flex();
+  }
 }
 
 .skill-text {
   @include d-flex();
   @include writing();
-  padding: 0.7em;
+  // padding: 1.7em;
+  width: 60%;
   height: 6.3em;
   background-image: url('./../../../assets/project_images_icons/ripped_papers/skills/description_paper.png');
-  background-position: center;
-  background-size: contain;
+  // background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

@@ -118,10 +118,11 @@ form {
         resize: both;
       }
     }
-    > span {
-      color: $red;
-    }
   }
+}
+
+.error-placeholder::placeholder {
+  color: $red;
 }
 
 input:-webkit-autofill {
@@ -148,7 +149,7 @@ hr {
 .checkbox {
   @include d-flex($ai: start, $g: 0.8rem);
   @include writing($fs: 1rem, $fw: 400, $c: $white);
-  > div span a {
+  > div a {
     color: $blue;
     &:hover {
       color: $yellow;

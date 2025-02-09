@@ -15,11 +15,11 @@
       <div class="content-inner-top">
         <div class="headine-top">
           <div class="hello-content">
-            <span>Hello world</span>
+            <span>{{ 'LANDING_PAGE.HELLO' | translate }}</span>
             <img src="./../../../assets/project_images_icons/icons/top_area/waving_hand.png" alt="Hand">
           </div>
           <div class="headine-text">
-            @for (item of headlineText; track $index) {
+            @for (item of [headlineText.frontend]; track $index) {
               @for (letter of item.noHoverFrontend; track $index) {
                 <p [ngClass]="{'text-color' : hoverIndexTop === $index}"  (mouseover)="mouseOverTop($index)" (mouseout)="mouseOutTop()">
                   {{ hoverIndexTop === $index ? item.hoverFrontend[$index] : letter }}
@@ -39,16 +39,26 @@
       </div>
       <div>
         <div class="headine-text">
-          @for (item of headlineText; track $index) {
-            @for (letter of item.noHoverDeveloper; track $index) {
-              <p [ngClass]="{'text-color' : hoverIndexBottom === $index}" (mouseover)="mouseOverBottom($index)" (mouseout)="mouseOutBottom()">
-                {{ hoverIndexBottom === $index ? item.hoverDeveloper[$index] : letter }}
-              </p>
+          @if (translate.currentLang == 'en') {
+            @for (item of [headlineText.developerEn]; track $index) {
+              @for (letter of item.noHoverDeveloper; track $index) {
+                <p [ngClass]="{'text-color' : hoverIndexBottom === $index}" (mouseover)="mouseOverBottom($index)" (mouseout)="mouseOutBottom()">
+                  {{ hoverIndexBottom === $index ? item.hoverDeveloper[$index] : letter }}
+                </p>
+              }
+            }
+          } @else if (translate.currentLang == 'de') {
+            @for (item of [headlineText.developerDe]; track $index) {
+              @for (letter of item.noHoverDeveloper; track $index) {
+                <p [ngClass]="{'text-color' : hoverIndexBottom === $index}" (mouseover)="mouseOverBottom($index)" (mouseout)="mouseOutBottom()">
+                  {{ hoverIndexBottom === $index ? item.hoverDeveloper[$index] : letter }}
+                </p>
+              }
             }
           }
         </div>
         <div class="container-button">
-          <button>Get in Touch</button>
+          <button>{{ 'LANDING_PAGE.BUTTON' | translate }}</button>
         </div>
       </div>
     </div>
