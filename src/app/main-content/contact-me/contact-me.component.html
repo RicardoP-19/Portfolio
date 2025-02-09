@@ -2,21 +2,13 @@
   <div class="main">
     <div class="contact-me-wrapper">
         <div>
-          <p>CONTACT ME</p>
-          <span>Ready to work <br> together?</span>
+          <p>{{ 'CONTACT_ME.ME' | translate }}</p>
+          <span>{{ 'CONTACT_ME.TITLE' | translate }}</span>
         </div>
         <div>
-          <span>
-            Kontaktieren Sie mich gerne über dieses Formular – ich freue mich darauf, 
-            von Ihnen zu hören! Teilen Sie Ihre Ideen und Projektanforderungen mit mir, 
-            und lassen Sie uns gemeinsam etwas Großartiges erschaffen.
-          </span>
+          <span>{{ 'CONTACT_ME.TEXT_TOP' | translate }}</span>
           <br>
-          <span>
-            Ob Website, Webanwendung oder eine maßgeschneiderte digitale Lösung – ich 
-            bringe mein Wissen und meine Erfahrung ein, um Ihre Vision bestmöglich 
-            umzusetzen. Ich freue mich auf Ihre Nachricht!
-          </span>
+          <span>{{ 'CONTACT_ME.TEXT_BOTTOM' | translate }}</span>
         </div>
         <div>
           <svg class="contact-me-animation" width="280" height="45" viewBox="0 0 280 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -33,15 +25,28 @@
     <div class="email-wrapper">
       <div class="sticker-wrapper">
         <div class="sticker-content">
-          @for (letter of stickerText; track $index) {
-            <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerText.length) -90) + 'deg) translateY(-70px)'}">
-              {{letter}}
-            </p>
-          }
-          @for (letter of stickerText; track $index) {
-            <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerText.length) -270) + 'deg) translateY(-70px)'}">
-              {{letter}}
-            </p>
+          @if (translate.currentLang == 'en') {
+            @for (letter of stickerTextEn; track $index) {
+              <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerTextEn.length) -90) + 'deg) translateY(-70px)'}">
+                {{letter}}
+              </p>
+            }
+            @for (letter of stickerTextEn; track $index) {
+              <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerTextEn.length) -270) + 'deg) translateY(-70px)'}">
+                {{letter}}
+              </p>
+            }
+          } @else if (translate.currentLang == 'de') {
+            @for (letter of stickerTextDe; track $index) {
+              <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerTextDe.length) -90) + 'deg) translateY(-70px)'}">
+                {{letter}}
+              </p>
+            }
+            @for (letter of stickerTextDe; track $index) {
+              <p [ngStyle]="{'transform': 'rotate(' + ($index * (180/ stickerTextDe.length) -270) + 'deg) translateY(-70px)'}">
+                {{letter}}
+              </p>
+            }
           }
           <img src="./../../../assets/project_images_icons/logo/RP_blue.png" alt="logo">
         </div>
@@ -50,27 +55,22 @@
         <div class="inputs-wrapper">
           <hr class="d-none">
           <div [ngStyle]="{padding: '1rem 1.4rem'}">
-            <label for="name">What's your name?</label>
-            <input  #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name goes here" required>
-            @if (!name.valid && name.touched) {
-              <span>Oops! it seems your name is missing</span>
-            }
+            <label for="name">{{ 'CONTACT_ME.FORM.NAME' | translate }}</label>
+            <input  #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" 
+            [placeholder]="!name.valid && name.touched ? ('CONTACT_ME.FORM.NAME_PLACEHOLDER_ERROR' | translate) : ('CONTACT_ME.FORM.NAME_PLACEHOLDER' | translate)" [ngClass]="{'error-placeholder': !name.valid && name.touched}" required>
           </div>
           <hr>
           <div [ngStyle]="{padding: '1rem 1.4rem'}">
-            <label for="email">What`s your email?</label>
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-            @if (!email.valid && email.touched) {
-              <span>Hoppla! your email is required</span>
-            }
+            <label for="email">{{ 'CONTACT_ME.FORM.EMAIL' | translate }}</label>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" 
+            [placeholder]="!email.valid && email.touched ? ('CONTACT_ME.FORM.EMAIL_PLACEHOLDER_ERROR' | translate) : ('CONTACT_ME.FORM.EMAIL_PLACEHOLDER' | translate)" [ngClass]="{'error-placeholder': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
           </div>
           <hr>
           <div [ngStyle]="{padding: '1rem 1.4rem 0rem'}">
-            <label for="message">How can I help you?</label>
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Hello Ricardo, I am interested in.." required></textarea>
-            @if (!message.valid && message.touched) {
-              <span>What do you need to develop?</span>
-            }
+            <label for="message">{{ 'CONTACT_ME.FORM.TEXTAREA' | translate }}</label>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" 
+            [placeholder]="!message.valid && message.touched ? ('CONTACT_ME.FORM.TEXTAREA_PLACEHOLDER_ERROR' | translate) : ('CONTACT_ME.FORM.TEXTAREA_PLACEHOLDER' | translate)" [ngClass]="{'error-placeholder': !message.valid && message.touched}"
+            required></textarea>
           </div>
           <hr>
         </div>
@@ -86,20 +86,19 @@
                 <input type="checkbox" name="isChecked" [(ngModel)]="isChecked" hidden>
               </div>
               <div>
-                <span>
-                I've read the <a  href="#">privacy policy</a> and agree to the processing of my data as outlined.
-                </span>
+                <span>{{ 'CONTACT_ME.FORM.CHECKBOX_FIRST_TEXT' | translate }}</span>
+                <a href="#">{{ 'CONTACT_ME.FORM.CHECKBOX_PRIVACY' | translate }}</a> 
+                <span>{{ 'CONTACT_ME.FORM.CHECKBOX_END_TEXT' | translate }}</span>
               </div>
             </div>
             <div>
               @if (!isChecked && reviewCheck) {
-                <span [ngStyle]="{'color': '#FF3A00'}">Please accept the privacy policy</span>
+                <span [ngStyle]="{'color': '#FF3A00'}">{{ 'CONTACT_ME.FORM.CHECKBOX_TEXT_ERROR' | translate }}</span>
               }
             </div>
           </div>
           <div class="send-button">
-            <!-- <input type="submit" value="Submit"> -->
-             <button type="submit" [disabled]="!contactForm.valid || !isChecked">Send</button>
+            <button type="submit" [disabled]="!contactForm.valid || !isChecked">{{ 'CONTACT_ME.FORM.BUTTON' | translate }}</button>
           </div> 
         </div>  
       </form>

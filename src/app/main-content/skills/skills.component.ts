@@ -1,13 +1,16 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  constructor(public translate: TranslateService) {}
 
   frontendSkillsTop = [
     {path: './assets/project_images_icons/icons/skills/html.png', name: 'HTML'},

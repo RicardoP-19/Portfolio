@@ -35,15 +35,12 @@ section {
   padding: 0 4.5rem;
 }
 
-.go-back {
-  @include d-flex($jc: start, $ai: center, $g: 1rem);
-  padding-left: 1.1rem;
+.close-overlay {
+  @include d-flex($jc: end);
   cursor: pointer;
-  > span {
-    @include writing($fs: 1.1rem, $fw: 700, $c: $black);
-    &:hover {
-      color: $orange;
-    }
+  > img {
+    width: 2em;
+    height: auto;
   }
 }
 

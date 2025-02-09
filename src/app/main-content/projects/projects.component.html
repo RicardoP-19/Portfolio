@@ -4,9 +4,9 @@
     <div class="project-wrapper-top">
       <div class="my-craft-text">
         <div>
-          <span>MY CRAFT</span>
+          <span>{{ 'PROJECTS.MY_CRAFT' | translate }}</span>
           <div class="projects-text-wrapper">
-            <span>Projects</span>
+            <span>{{ 'PROJECTS.TITLE' | translate }}</span>
             <svg class="projects-text-animation" width="260" height="21" viewBox="0 0 260 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect y="0.109375" width="260" height="20" fill="url(#pattern0_3353_813)"/>
               <defs>
@@ -18,10 +18,7 @@
             </svg>            
           </div>
         </div>
-        <span>
-          Take a look at some of my projects and see my frontend skills in action. <br>   Each project highlights my approach to building responsive, user-friendly <br> 
-          designs with efficient code.
-        </span>
+        <span>{{ 'PROJECTS.TEXT' | translate }}</span>
       </div>
       <div>
         @for (item of projectService.frontendProjects; track $index) {
@@ -30,13 +27,17 @@
               <img class="project-image" src="{{item.path}}" alt="">
               <div class="button-wrapper">
                 <div class="button-container">
-                  <button (click)="openOverlay($index)">Project details</button>
+                  <button (click)="openOverlay($index)">{{ 'PROJECTS.BUTTON' | translate }}</button>
                 </div>
               </div>
             </div>
             <div>
               <p class="project-title">{{item.title}}</p>
-              <span>{{item.description}}</span>
+              @if(translate.currentLang == 'en') {
+                <span>{{item.descriptionEn}}</span>
+              } @else if (translate.currentLang == 'de') {
+                <span>{{item.descriptionDe}}</span>
+              }
             </div>
           }
         }
@@ -50,11 +51,15 @@
               <img class="project-image" src="{{item.path}}" alt="">
               <div class="button-wrapper">
                 <div class="button-container">
-                  <button (click)="openOverlay($index)">Project details</button>
+                  <button (click)="openOverlay($index)">{{ 'PROJECTS.BUTTON' | translate }}</button>
                 </div>
               </div>
               <p class="project-title">{{item.title}}</p>
-              <span>{{item.description}}</span>
+              @if(translate.currentLang == 'en') {
+                <span>{{item.descriptionEn}}</span>
+              } @else if (translate.currentLang == 'de') {
+                <span>{{item.descriptionDe}}</span>
+              }
             </div>
           }
         }
