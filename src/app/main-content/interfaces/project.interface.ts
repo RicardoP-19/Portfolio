@@ -10,5 +10,5 @@ export interface Project {
   durationDe: string;
   skills: { path: string; name: string }[];
   gitHub: string;
-  liveServer?: string; 
+  liveTest: string; 
 }
