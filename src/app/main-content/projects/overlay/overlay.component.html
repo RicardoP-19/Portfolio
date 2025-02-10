@@ -1,6 +1,6 @@
 <section [ngClass]="{ 'd-none': !project }">
   <div class="overlay-background">
-    <div class="overlay-wrapper">
+    <div class="overlay-wrapper" [ngClass]="project ? 'overlay-animation' : null">
       <div class="close-overlay">
         <img (click)="closeOverlay()" src="./../../../../assets/project_images_icons/mobile/close_white.png" alt="Close">
       </div>
