@@ -88,7 +88,7 @@ section {
 
 .sticker-wrapper {
   @include d-flex();
-  transform: rotate(8deg);
+  transform: rotate(8deg) !important;
   width: 12.5em;
   height: 12.5em;
   cursor: pointer;

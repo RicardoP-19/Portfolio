@@ -35,6 +35,22 @@ section {
   padding: 0 4.5rem;
 }
 
+.overlay-animation {
+  animation: myAnim 0.7s ease 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 .close-overlay {
   @include d-flex($jc: end);
   cursor: pointer;

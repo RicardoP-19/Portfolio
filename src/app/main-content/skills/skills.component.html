@@ -27,15 +27,15 @@
         <div class="skill-icons">
           <div>
             @for (item of frontendSkillsTop; track $index) {
-              <div class="skill-icon-name">
-                <img src="{{item.path}}" alt="">
+              <div data-aos="flip-left" data-aos-duration="1200" class="skill-icon-name">
+                <img  src="{{item.path}}" alt="">
                 <p>{{item.name}}</p>
               </div>
             }
           </div>
           <div>
             @for (item of frontendSkillsBottom; track $index) {
-              <div class="skill-icon-name">
+              <div data-aos="flip-right" data-aos-duration="1200" class="skill-icon-name">
                 <img src="{{item.path}}" alt="">
                 <p>{{item.name}}</p>
               </div>
@@ -43,7 +43,7 @@
           </div>      
         </div>
         <div class="sticker-wrapper">
-          <div class="sticker-top" (click)="startAnimation()" #stickerTop>
+          <div data-aos="flip-left" data-aos-duration="700" class="sticker-top" (click)="startAnimation()" #stickerTop>
             <div #stickerTopContent>
               <img src="./../../../assets/project_images_icons/icons/sticker/arrow.png" alt="Arrow">
               <span>{{ 'SKILLS.STICKER_TEXT' | translate }}</span>
