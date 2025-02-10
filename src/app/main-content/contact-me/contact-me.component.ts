@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FooterComponent } from "../../shared/components/footer/footer.component";
-import { log } from 'console';
 import { ignoreElements } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -30,7 +29,7 @@ export class ContactMeComponent {
     message: "",
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://ricardo-pinto.com/sendMail.php',
@@ -47,8 +46,7 @@ export class ContactMeComponent {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
-
+          next: (response) => {            
             ngForm.resetForm();
           },
           error: (error) => {
