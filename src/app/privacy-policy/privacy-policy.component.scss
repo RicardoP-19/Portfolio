@@ -1,0 +1,43 @@
+@import './../shared/style/mixins.scss';
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+section {
+  @include d-flex($ai: none);
+  height: 100vh;
+}
+
+.privacy-policy-wrapper {
+  max-width: 1920px;
+  overflow-y: scroll;
+}
+
+.privacy-policy-content {
+  background-image: url('./../../assets/project_images_icons/background_images/paper.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 2rem;
+  overflow-y: scroll;
+  height: 90%;
+  > div {
+    @include d-flex($jc: end);
+    > a img {
+      width: 1.5em;
+      cursor: pointer;
+    }
+  }
+}
+
+.privacy-policy-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: 15%;
+  background-image: url('./../../assets/project_images_icons/background_images/background_bottom_small.png');
+  background-position: top;
+  background-size: cover;
+}
