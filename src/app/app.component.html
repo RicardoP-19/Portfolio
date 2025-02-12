@@ -1,2 +1,6 @@
-<app-header [ngClass]="{'d-none': hideHeader}"></app-header>
-<router-outlet></router-outlet>
+@if (showIntro) {
+  <app-intro></app-intro>
+} @else if (!showIntro){
+  <app-header [ngClass]="{'d-none': hideHeader}"></app-header>
+  <router-outlet></router-outlet>
+}
