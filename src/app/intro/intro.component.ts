@@ -13,7 +13,7 @@ export class IntroComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.showIntro = false;
-    }, 5500);
+    }, 5000);
   }
 
 }
