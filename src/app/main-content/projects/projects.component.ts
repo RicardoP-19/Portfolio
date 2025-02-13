@@ -19,6 +19,7 @@ export class ProjectsComponent {
   constructor(public translate: TranslateService) {}
 
   openOverlay(index:number) {
+    this.projectService.projectIndex = index;
     this.selectedProject = this.projectService.projects[index];
     document.body.style.overflow = 'hidden';
   }

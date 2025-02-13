@@ -19,7 +19,6 @@ export class OverlayComponent {
   constructor(public translate: TranslateService) {}
 
   nextProject() {
-    debugger
     this.project = this.projectService.nextProject();
   }
 
