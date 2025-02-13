@@ -6,11 +6,12 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import path from 'path';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule, FooterComponent, TranslateModule],
+  imports: [CommonModule, FormsModule, FooterComponent, TranslateModule, RouterLink],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })

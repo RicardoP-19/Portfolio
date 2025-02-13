@@ -21,6 +21,8 @@ header {
   width: 100%;
   @include d-flex($jc: space-evenly);
   > div a {
+    position: relative;
+    z-index: 20;
     @include writing($fw: 700, $c: $white);
   }
 }

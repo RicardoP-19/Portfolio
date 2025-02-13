@@ -10,10 +10,6 @@ section {
   background-repeat: no-repeat;
 }
 
-.main {
-  height: 100%;
-}
-
 .links-wrapper {
   @include d-flex($jc: end, $ai: none);
   flex-direction: column;

@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
       setTimeout(() => {
         this.showIntro = false;
         sessionStorage.setItem('introShown', 'true');
-      }, 6000);
+      }, 5100);
     }
 
     AOS.init({
