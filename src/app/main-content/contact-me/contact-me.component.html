@@ -79,9 +79,9 @@
             <div class="checkbox">
               <div class="checkbox-img">
                 @if (!isChecked) {
-                  <img (click)="check()" src="../../../assets/project_images_icons/contact-mail/void.png" alt="">
+                  <img (click)="check()" src="../../../assets/project_images_icons/contact-mail/void.png">
                 } @else if (isChecked) {
-                  <img (click)="check()" src="./../../../assets/project_images_icons/contact-mail/checked.png" alt="">
+                  <img (click)="check()" src="./../../../assets/project_images_icons/contact-mail/checked.png">
                 }
                 <input type="checkbox" name="isChecked" [(ngModel)]="isChecked" hidden>
               </div>
