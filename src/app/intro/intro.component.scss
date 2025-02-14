@@ -18,7 +18,37 @@ section {
   font-weight: bold;
   display: inline-block;
   position: relative;
-  color: #3355FF;
+  background-image: linear-gradient(
+    180deg,
+    hsl(231deg 74% 53%) 0%,
+    hsl(231deg 70% 52%) 12%,
+    hsl(231deg 66% 50%) 18%,
+    hsl(231deg 65% 49%) 22%,
+    hsl(231deg 64% 47%) 26%,
+    hsl(231deg 64% 46%) 29%,
+    hsl(231deg 64% 44%) 33%,
+    hsl(231deg 64% 43%) 36%,
+    hsl(231deg 64% 42%) 39%,
+    hsl(231deg 63% 40%) 42%,
+    hsl(231deg 63% 39%) 44%,
+    hsl(231deg 63% 37%) 47%,
+    hsl(231deg 63% 36%) 50%,
+    hsl(231deg 63% 35%) 53%,
+    hsl(231deg 62% 34%) 56%,
+    hsl(231deg 62% 32%) 58%,
+    hsl(231deg 62% 31%) 61%,
+    hsl(231deg 62% 30%) 64%,
+    hsl(231deg 62% 29%) 67%,
+    hsl(231deg 62% 28%) 71%,
+    hsl(231deg 62% 27%) 74%,
+    hsl(231deg 62% 26%) 78%,
+    hsl(231deg 62% 25%) 82%,
+    hsl(231deg 62% 24%) 88%,
+    hsl(232deg 62% 23%) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   animation: textAnimation 3s ease 0s 1 normal forwards;
   overflow: hidden;
 }
@@ -52,7 +82,37 @@ section {
 }
 
 .glanz-text.finished {
-  color: #3355FF;
+  background-image: linear-gradient(
+    180deg,
+    hsl(231deg 74% 53%) 0%,
+    hsl(231deg 70% 52%) 12%,
+    hsl(231deg 66% 50%) 18%,
+    hsl(231deg 65% 49%) 22%,
+    hsl(231deg 64% 47%) 26%,
+    hsl(231deg 64% 46%) 29%,
+    hsl(231deg 64% 44%) 33%,
+    hsl(231deg 64% 43%) 36%,
+    hsl(231deg 64% 42%) 39%,
+    hsl(231deg 63% 40%) 42%,
+    hsl(231deg 63% 39%) 44%,
+    hsl(231deg 63% 37%) 47%,
+    hsl(231deg 63% 36%) 50%,
+    hsl(231deg 63% 35%) 53%,
+    hsl(231deg 62% 34%) 56%,
+    hsl(231deg 62% 32%) 58%,
+    hsl(231deg 62% 31%) 61%,
+    hsl(231deg 62% 30%) 64%,
+    hsl(231deg 62% 29%) 67%,
+    hsl(231deg 62% 28%) 71%,
+    hsl(231deg 62% 27%) 74%,
+    hsl(231deg 62% 26%) 78%,
+    hsl(231deg 62% 25%) 82%,
+    hsl(231deg 62% 24%) 88%,
+    hsl(232deg 62% 23%) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 
