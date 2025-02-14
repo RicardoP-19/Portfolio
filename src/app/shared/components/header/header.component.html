@@ -1,7 +1,9 @@
 <header>
   <div class="main">
     <div class="logo" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
-      <img [src]="imageSrc" alt="Logo" />
+      <a href="/">
+        <img [src]="imageSrc" alt="Logo"/>
+      </a>
     </div>
     <nav class="menu-links">
       <div class="link-content">
@@ -55,8 +57,8 @@
     </nav>
     <div class="language-wrapper">
       <div class="language-content">
-        <span [ngClass]="{'selected': currentLanguage == 'en'}" (click)="changeLanguage('en')">EN</span>
-        <svg [ngClass]="{'d-none': currentLanguage == 'en'}" class="english-frame" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <span [ngClass]="{'selected': language == 'en'}" (click)="changeLanguage('en')">EN</span>
+        <svg [ngClass]="{'d-none': language == 'en'}" class="english-frame" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect x="0.875" width="32" height="32" fill="url(#pattern0_2852_1995)"></rect>
           <defs>
           <pattern id="pattern0_2852_1995" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -75,8 +77,8 @@
         </svg>
       </div>
       <div class="language-content">        
-        <span [ngClass]="{'selected': currentLanguage == 'de'}" (click)="changeLanguage('de')">DE</span>
-        <svg [ngClass]="{'d-none': currentLanguage == 'de'}" class="german-frame" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/ 2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <span [ngClass]="{'selected': language == 'de'}" (click)="changeLanguage('de')">DE</span>
+        <svg [ngClass]="{'d-none': language == 'de'}" class="german-frame" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/ 2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect x="32.875" y="32" width="32" height="32" transform="rotate(-180 32.875 32)" fill="url(#pattern0_2852_1999)"/>
           <defs>
           <pattern id="pattern0_2852_1999" patternContentUnits="objectBoundingBox" width="1" height="1">
