@@ -24,7 +24,7 @@
         @for (item of projectService.frontendProjects; track $index) {
           @if ($index == 0) {
             <div data-aos="fade-up" data-aos-duration="500">
-              <img class="project-image" src="{{item.path}}" alt="">
+              <img class="project-image" src="{{item.path}}">
               <div class="button-wrapper">
                 <div class="button-container">
                   <button (click)="openOverlay($index)">{{ 'PROJECTS.BUTTON' | translate }}</button>
@@ -49,7 +49,7 @@
           @if ($index > 0) {
             <div>
               <div data-aos="fade-up" data-aos-duration="500">
-                <img class="project-image" src="{{item.path}}" alt="">
+                <img class="project-image" src="{{item.path}}">
                 <div class="button-wrapper">
                   <div class="button-container">
                     <button (click)="openOverlay($index)">{{ 'PROJECTS.BUTTON' | translate }}</button>

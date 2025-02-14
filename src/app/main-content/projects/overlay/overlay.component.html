@@ -57,7 +57,7 @@
             </div>
             <div class="skills-used">
               @for (skills of project?.skills; track $index) {
-                <img src="{{skills.path}}" alt="">
+                <img src="{{skills.path}}" alt="Skill">
                 <p>{{skills.name}}</p>
               }
             </div>
@@ -65,9 +65,9 @@
         </div>
         <div class="content-right">
           @if (project?.title == 'Join') {
-            <img class="project-image" src="{{project?.overlay}}" alt="">
+            <img class="project-image" src="{{project?.overlay}}">
           } @else {
-            <img class="project-image" src="{{project?.path}}" alt="">
+            <img class="project-image" src="{{project?.path}}">
           } 
           <div>
             <div>
