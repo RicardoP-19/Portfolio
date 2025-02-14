@@ -148,5 +148,11 @@
       "REQUEST_TEXT_BOTTOM": "The data you send us via inquiries will remain with us until you request its deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory legal provisions – in particular, statutory retention periods – remain unaffected.",
       "REQUEST_LINK": "Source:"
     }
+  },
+  "LEGAL_NOTICE": {
+    "TITLE": "Legal notice",
+    "PROVIDER": "Service provider",
+    "CONTACT": "Contact possibility",
+    "MAIL": "E-mail-adress:"
   }
 }

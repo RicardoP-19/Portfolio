@@ -1,23 +1,21 @@
 <section>
   <div>
-    <img class="img-top" src="./../../assets/project_images_icons/background_images/background_top.png" alt="">
-    <div class="imprint-content">
-      <div class="close">
-        <a routerLink="/">
-          <img src="./../../assets/project_images_icons/icons/privacy_policy/close.png" alt="close">
-        </a>
-      </div>
-      <div class="provider-content">
-        <h1>Imprint</h1>
-        <span [ngStyle]="{'color' : '#F87A55'}"> Service provider</span>
-        <div>
-          <p>Ricardo Pinto</p>
-          <p>Merowinger Str.25</p>
-          <p>85435 Erding</p>
-        </div>
-        <span>e-mail address: ricardo-pinto&#64;web.de</span>
-      </div>
+    <div class="header">
+      <app-header></app-header>
     </div>
-    <img class="img-bottom" src="./../../assets/project_images_icons/background_images/background_bottom.png" alt="">
+    <div class="provider-content">
+        <h1>{{ 'LEGAL_NOTICE.TITLE' | translate }}</h1>
+        <h2 [ngStyle]="{ color: '#F87A55' }">{{ 'LEGAL_NOTICE.PROVIDER' | translate }}</h2>
+        <p>Ricardo Pinto</p>
+        <p>Merowinger Str.25</p>
+        <p>85435 Erding</p>
+
+        <h2 id="m56">{{ 'LEGAL_NOTICE.CONTACT' | translate }}</h2>
+        <p>
+          {{ 'LEGAL_NOTICE.MAIL' | translate }}
+          <a href="#contact" [ngStyle]="{ color: '#3355FF' }">ricardo-pinto&#64;web.de</a>
+        </p>
+    </div>
+    <div class="footer-image"></div>
   </div>
 </section>
