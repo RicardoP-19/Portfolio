@@ -4,38 +4,48 @@
   display: none;
 }
 
-
 section {
-  @include d-flex($ai: none);
+  @include d-flex();
+  width: 100vw;
+}
+
+.main {
+  flex-direction: column;
+  max-width: none;
   height: 100vh;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background-image: url('./../../assets/project_images_icons/background_images/background_top.png');
+  background-position: bottom;
+  background-size: cover;
+}
+
 .privacy-policy-wrapper {
-  max-width: 1920px;
+  @include d-flex();
+  width: 100%;
+  height: 100%;
+  background-image: url('./../../assets/project_images_icons/background_images/paper.jpg');
+  background-position: center;
+  background-size: cover;
   overflow-y: scroll;
 }
 
 .privacy-policy-content {
-  background-image: url('./../../assets/project_images_icons/background_images/paper.jpg');
-  background-position: center;
-  background-size: cover;
-  padding: 2rem;
+  padding: 1rem 2rem;
   overflow-y: scroll;
-  height: 90%;
-  > div {
-    @include d-flex($jc: end);
-    > a img {
-      width: 1.5em;
-      cursor: pointer;
-    }
-  }
+  max-width: 1920px;
+  height: 65%;
 }
 
 .privacy-policy-image {
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-width: 1920px;
   height: 15%;
   background-image: url('./../../assets/project_images_icons/background_images/background_bottom_small.png');
   background-position: top;
