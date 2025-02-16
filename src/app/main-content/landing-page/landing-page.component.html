@@ -1,21 +1,11 @@
 <section>
   <div class="main">
-    <div class="links-wrapper">
-      <a href="https://www.linkedin.com/in/ricardo-pinto-90248b351/" target="_blank" class="link">
-        <img src="./../../../assets/project_images_icons/icons/top_area/linkedin.png" alt="Linkedin">
-      </a>
-      <a href="https://github.com/RicardoP-19" target="_blank" class="link">
-        <img src="./../../../assets/project_images_icons/icons/top_area/github.png" alt="Github">
-      </a>
-      <a href="#contact" class="link">
-        <img src="./../../../assets/project_images_icons/icons/top_area/mail.png" alt="Mail">
-      </a>
-    </div>
-    <div [ngStyle]="{'flex': '1'}">
-      <div class="content-inner-top">
+    <div class="headline-wrapper">
+      <div class="headlin-content-top">
         <div class="headine-top">
           <div class="hello-content">
-            <span>{{ 'LANDING_PAGE.HELLO' | translate }}</span>
+             <span class="default-text">{{ 'LANDING_PAGE.HELLO' | translate }}</span>
+             <span class="hover-text">{{ 'LANDING_PAGE.HELLO_HOVER' | translate }}</span>
             <img src="./../../../assets/project_images_icons/icons/top_area/waving_hand.png" alt="Hand">
           </div>
           <div class="headine-text">
@@ -28,7 +18,7 @@
             }
           </div>
         </div>
-        <div class="polaroid" (mouseover)="mouseOverPhoto()" (mouseout)="mouseOutPhoto()">
+        <div class="polaroid polaroid-desktop" (mouseover)="mouseOverPhoto()" (mouseout)="mouseOutPhoto()">
           <div>
             <p>Ricardo</p>
             <span [ngClass]="{'d-none': isHovered}">:)</span>
@@ -37,7 +27,7 @@
           <img src="./../../../assets/project_images_icons/polaroid/profil_image.png" alt="Profil-Image"> 
         </div>
       </div>
-      <div>
+      <div class="headline-content-bottom">
         <div class="headine-text">
           @if (translate.currentLang == 'en') {
             @for (item of [headlineText.developerEn]; track $index) {
@@ -63,6 +53,24 @@
           </a>
         </div>
       </div>
+    </div>
+    <div class="links-wrapper">
+      <a href="https://www.linkedin.com/in/ricardo-pinto-90248b351/" target="_blank" class="link">
+        <img src="./../../../assets/project_images_icons/icons/top_area/linkedin.png" alt="Linkedin">
+      </a>
+      <a href="https://github.com/RicardoP-19" target="_blank" class="link">
+        <img src="./../../../assets/project_images_icons/icons/top_area/github.png" alt="Github">
+      </a>
+      <a href="#contact" class="link">
+        <img src="./../../../assets/project_images_icons/icons/top_area/mail.png" alt="Mail">
+      </a>
+    </div>
+    <div class=" polaroid polaroid-mobile">
+      <div>
+        <p>Ricardo</p>
+        <span>:D</span>
+      </div>
+      <img src="./../../../assets/project_images_icons/polaroid/profil_image.png" alt="Profil-Image"> 
     </div>
   </div>
 </section>

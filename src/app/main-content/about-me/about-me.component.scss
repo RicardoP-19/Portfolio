@@ -9,48 +9,45 @@ section {
 .main {
   padding: 2rem 4rem;
   > div {
+    @include d-flex();
+    flex-direction: column;
+    padding: 3rem;
     width: 50%;
   }
 }
 
-.yellow-paper {
+.paper {
   @include d-flex($g: 1rem);
+  background-position: top;
+  background-size: cover;
+  width: 35rem;
+  height: 10rem;
+  > img {
+    width: 2em;
+  }
+  > span {
+    color: $white;
+  }
+}
+
+.yellow {
   position: relative;
   top: 1.9rem;
   background-image: url('./../../../assets/project_images_icons/ripped_papers/about_me_paper/yellow.png');
-  background-position: top;
-  background-size: cover;
-  width: 35rem;
-  height: 10rem;
   transform: rotate(-2deg);
   > img {
-    width: 2em;
     transform: rotate(-5deg);
   } 
   > span {
-    color: $white;
     transform: rotate(-5deg);
   }
 }
 
-.blue-paper {
-  @include d-flex($g: 1rem);
+.blue {
   background-image: url('./../../../assets/project_images_icons/ripped_papers/about_me_paper/blue.png');
-  background-position: top;
-  background-size: cover;
-  width: 35rem;
-  height: 10rem;
-  > img {
-    width: 2em;
-  } 
-  > span {
-    color: $white;
-  }
 }
 
 .about-me-wrapper {
-  @include d-flex($ai: start, $g: 1.5rem);
-  flex-direction: column;
   > p {
     @include writing($fs: 1.1rem, $fw: 500, $c: $black);
     margin: 0;
@@ -77,6 +74,36 @@ section {
   width: 100%;
   padding-top: 1em;
   >a button {
-    @include button-white($w: 8rem, $bw: 1px 5px 4px 1px,  $bc: $black, $c: $black, $bgc: $white, $hbc: $black, $hc: $white);
+    @include button-white($w: 9rem, $bw: 1px 5px 4px 1px,  $bc: $black, $c: $black, $bgc: $white, $hbc: $black, $hc: $white);
+  }
+}
+
+@media(max-width: 1200px) {
+  .paper {
+    width: 25rem;
+    height: 7rem;
+  }
+}
+
+@media(max-width: 900px) {
+  .main {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+    > div {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .paper {
+    width: 18rem;
+    height: 5rem;
+    > img {
+      width: 1.5em;
+    }
+  }
+
+  .yellow {
+    top: 1.4rem;
   }
 }
