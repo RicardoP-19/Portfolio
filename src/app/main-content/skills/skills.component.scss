@@ -11,22 +11,31 @@ section {
 }
 
 .main {
-  @include d-flex($ai: start, $g: 7rem);
+  @include d-flex($ai: center, $g: 4rem);
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem 4rem;
 }
 
-.skill-set-wrapper {
+.skill-wrapper {
+  @include d-flex($ai: end, $g: 6rem);
   @include writing($fs: 1.1rem, $fw: 400, $c: $white);
-  height: 100%;
+  width: 100%;
+}
+
+.my-stack-wrapper {
+  width: 15%;
 }
 
 .my-stack {
-  height: 100%;
-  text-align: end;
-  padding-bottom: 1em
+  @include d-flex($jc: end);
+  width: 100%;
+  padding-bottom: 1rem
 }
 
-.skill-set {
-  height: 100%;
+.skill {
+  @include d-flex();
+  width: 100%;
   > svg {
     position: absolute;
   } >span {
@@ -41,27 +50,28 @@ section {
 }
 
 .skills-container {
-  @include d-flex($jc: end, $ai: start, $g: 4rem);
-  flex-direction: column;
-  > div {
-    @include d-flex();
-  }
+  @include d-flex($jc: center);
+  width: 100%;
 }
 
 .skill-text {
   @include d-flex();
   @include writing();
-  // padding: 1.7em;
-  width: 60%;
-  height: 6.3em;
+  width: 70%;
+  min-height: 8em;
+  padding: 1em;
   background-image: url('./../../../assets/project_images_icons/ripped_papers/skills/description_paper.png');
-  // background-position: center;
-  background-size: cover;
+  background-position: center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  text-align: center;
+  > span {
+    word-wrap: break-word;
+  }
 }
 
 .skills-wrapper {
-  @include d-flex($jc: center, $ai: center, $g: 3rem);
+  @include d-flex($jc: start, $ai: center, $g: 3rem);
 }
 
 .skill-icons {
@@ -74,7 +84,7 @@ section {
 }
 
 .skill-icon-name {
-  @include d-flex($jc: center, $ai: center, $g: 0rem);
+  @include d-flex($jc: center, $ai: center, $g: 0.7rem);
   flex-direction: column;
   > img {
     filter: grayscale(1);
@@ -83,6 +93,9 @@ section {
       filter: grayscale(0);
       transform: scale(0.8);
     }
+  }
+  > p {
+    text-align: center
   }
 }
 

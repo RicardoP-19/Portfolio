@@ -31,51 +31,48 @@ section {
   @include writing($fs: 4rem, $fw: 700, $c: $black)
 }
 
-.reviews-wrapper {
+.cards-wrapper {
   @include d-flex();
   > div {
-    @include d-flex($jc: space-around);
+    @include d-flex($jc: space-between, $g:3rem);
     flex-direction: column;
-    padding: 2.5rem;
     position: relative;
-    width: 32rem;
-    height: 20rem;
+    padding: 1.5rem;
+    max-width: 28rem;
+    min-height: 20rem;
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     &:hover{
       z-index: 999;
     }
-    &:hover div span,
-    &:hover div p{
+    &:hover div p,
+    &:hover div span{
       color: $white;
     }
-  } > span {
-    position: relative;
-    z-index: 10;
   }
 }
 
 .card-left {
   left: 10rem;
   z-index: 10;
-  transform: rotate(-4deg);
+  transform: rotate(-4deg) !important;
   background-image: url('./../../../assets/project_images_icons/feedback_card/card.png');
   > div {
     @include d-flex($ai: start !important, $g: 0.7rem);
     flex-direction: column;
     width: 100%;
-    > p {
-      @include writing($fs: 1.2rem, $fw: 700, $c: $black);
-      margin: 0;
-    } >span {
-      @include writing($fs: 1rem, $fw: 500, $c: $black);
-    }
+  } > div p {
+    @include writing($fs: 1.2rem, $fw: 700, $c: $black);
+    margin: 0;
+  } > div span {
+    @include writing($fs: 1rem, $fw: 500, $c: $black);
   }
 }
 
 .card-center {
-  top: 2rem;  
+  max-width: 26rem !important;
+  top: 2rem;
   z-index: 5;
   background-image: url('./../../../assets/project_images_icons/feedback_card/card_demaged.png');
   > div {
@@ -93,7 +90,7 @@ section {
 .card-right {
   right: 10rem;
   z-index: 0;
-  transform: rotate(4deg);
+  transform: rotate(4deg) !important;
   background-image: url('./../../../assets/project_images_icons/feedback_card/card.png');
   > div {
     @include d-flex($ai: start !important, $g: 0.7rem);
@@ -128,4 +125,63 @@ section {
 .card-center:hover::after, 
 .card-right:hover::after{
   opacity: 0.5;
+}
+
+@media(max-width: 1200px) {
+  .cards-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card-left,
+  .card-center,
+  .card-right {
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media(max-width: 770px) {
+  .headline-text {
+    text-align: end;
+  }
+
+  .cards-wrapper {
+    > div {
+      &:hover div p,
+      &:hover div span{
+        color: $black;
+      }
+    }
+  }
+
+  .card-left,
+  .card-center,
+  .card-right {
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .card-left:hover:after, 
+  .card-center:hover::after, 
+  .card-right:hover::after{
+    opacity: 0;
+  }
+}
+
+@media(max-width: 600px) {
+  .main {
+    padding: 4rem 1rem;
+  }
+}
+
+@media(max-width: 380px) {
+  .animation-container {
+    gap: 0;
+  }
+
+  .headline-text {
+    font-size: 3rem;
+  }
 }

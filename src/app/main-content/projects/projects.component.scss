@@ -12,7 +12,7 @@ section {
 }
 
 .project-wrapper-top {
-  @include d-flex($g: 2rem);
+  @include d-flex($g: 3rem);
   > div {
     width: 50%;
   }
