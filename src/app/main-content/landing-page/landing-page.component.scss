@@ -188,7 +188,7 @@ section {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 910px) {
   .hello-content {
     background-size: 100% 100%;
     width: 13rem;
@@ -226,15 +226,15 @@ section {
   .headine-text {
     gap: 0;
     > p {
-      font-size: 5rem;
+      font-size: 6rem;
     }
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 570px) {
   .headine-text {
     > p {
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
   }
 
@@ -243,25 +243,22 @@ section {
       @include button-white($w: 11rem, $h: 2.5rem, $fs: 1em, $hc: $white);
     }
   }
-
-  .polaroid {
-    width: 10rem;
-    height: 11rem;
-    > div {
-      font-size: 1rem;
-    }
-    > img {
-      top: 11px;
-      width: 8rem;
-      height: 8rem;
-    }
-  }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 450px) {
   .headine-text {
     > p {
       font-size: 3rem;
+    }
+  }
+
+    .polaroid {
+    width: 13rem;
+    height: 14rem;
+    > img {
+      top: 13px;
+      width: 10rem;
+      height: 10rem;
     }
   }
 }
