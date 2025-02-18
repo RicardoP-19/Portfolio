@@ -1,6 +1,6 @@
 <section>
   <div class="main">
-    <div class="skill-wrapper">
+    <div class="skill-headline-wrapper">
       <div class="my-stack-wrapper">
         <div class="my-stack">
           <span>{{ 'SKILLS.MY_STACK' | translate }}</span>
@@ -33,14 +33,6 @@
               </div>
             }
           </div>
-          <div>
-            @for (item of frontendSkillsBottom; track $index) {
-              <div data-aos="flip-right" data-aos-duration="1200" class="skill-icon-name">
-                <img src="{{item.path}}" alt="">
-                <p>{{item.name}}</p>
-              </div>
-            }
-          </div>      
         </div>
         <div class="sticker-wrapper">
           <div data-aos="flip-left" data-aos-duration="700" class="sticker-top" (click)="startAnimation()" #stickerTop>

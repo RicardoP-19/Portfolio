@@ -4,7 +4,7 @@
 section {
   @include d-flex();
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('./../../../assets/project_images_icons/background_images/background-skills.png');
   background-position: bottom;
   background-size: cover;
@@ -17,7 +17,7 @@ section {
   padding: 2rem 4rem;
 }
 
-.skill-wrapper {
+.skill-headline-wrapper {
   @include d-flex($ai: end, $g: 6rem);
   @include writing($fs: 1.1rem, $fw: 400, $c: $white);
   width: 100%;
@@ -29,7 +29,6 @@ section {
 
 .my-stack {
   @include d-flex($jc: end);
-  width: 100%;
   padding-bottom: 1rem
 }
 
@@ -49,11 +48,6 @@ section {
   @include animation();
 }
 
-.skills-container {
-  @include d-flex($jc: center);
-  width: 100%;
-}
-
 .skill-text {
   @include d-flex();
   @include writing();
@@ -71,15 +65,16 @@ section {
 }
 
 .skills-wrapper {
-  @include d-flex($jc: start, $ai: center, $g: 3rem);
+  @include d-flex($jc: center, $ai: center);
 }
 
 .skill-icons {
-  @include d-flex($jc: center, $ai: center, $g: 3rem);
-  flex-direction: column;
+  @include d-flex($jc: end, $ai: none);
   > div {
-    @include d-flex($jc: center, $ai: center, $g: 4rem);
+    @include d-flex($jc: center, $ai: center, $g: 2rem);
     @include writing($c: $white);
+    flex-wrap: wrap;
+    width: 70%;
   }
 }
 
@@ -102,8 +97,8 @@ section {
 .sticker-wrapper {
   @include d-flex();
   transform: rotate(8deg) !important;
-  width: 12.5em;
-  height: 12.5em;
+  width: 30em;
+  height: 13em;
   cursor: pointer;
 }
 
@@ -111,15 +106,15 @@ section {
   @include d-flex();
   background-image: url('./../../../assets/project_images_icons/icons/sticker/Default.png');
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   > div {
     @include d-flex();
     flex-direction: column;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    padding: 1rem;
   } > div span {
     @include writing($fs: 2rem, $fw: 400, $c: $white);
     font-family: 'Kalam-Regular';
@@ -148,7 +143,8 @@ section {
   flex-direction: column;
   background-image: url('./../../../assets/project_images_icons/icons/sticker/Final.png');
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   > div span {
@@ -157,5 +153,64 @@ section {
     @include writing($fs: 1.1rem, $fw: 700, $c: $white);
   } > div {
     @include d-flex($g: 0.8rem);
+  }
+}
+
+@media (max-width: 940px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+
+  .skill-headline-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .my-stack-wrapper {
+    width: 100%;
+  }
+
+  .skill {
+    justify-content: end;
+    > span {
+      padding-right: 5rem;
+    }
+  }
+
+  .skill-icon-name {
+    > img {
+      filter: grayscale(0);
+      transition: none !important;
+      transform: none !important;    
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .skills-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .skill-icons {
+    justify-content: center;
+    width: 100%;
+    > div {
+      gap: 1rem;
+    }
+  }
+
+  .sticker-wrapper {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .skill-text {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 2em;
   }
 }
