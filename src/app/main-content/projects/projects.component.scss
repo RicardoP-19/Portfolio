@@ -99,3 +99,107 @@ section {
 .project-title {
   @include writing($fs: 1.7rem, $fw: 700, $c: $black);
 }
+
+@media (max-width: 1100px) {
+  .button-container {
+    > button {
+      width: 10rem;
+      height: 2.5rem;
+    }
+  }
+
+  .button-wrapper::before {
+    bottom: 3.1em;
+  }
+
+  .button-wrapper::after {
+    right: 10.6em;
+  }
+}
+
+@media (max-width: 940px) {
+  .project-wrapper-top {
+    flex-direction: column;
+    > div {
+      width: 90%;
+    }
+  }
+
+  .project-wrapper-bottom {
+    align-items: center;
+    flex-direction: column;
+    > div {
+      width: 90%;
+    }
+  }
+
+  .button-container {
+    > button {
+      width: 13rem;
+      height: 3.5rem;
+    }
+  }
+
+  .button-wrapper::before {
+    bottom: 4.1em;
+  }
+
+  .button-wrapper::after {
+    right: 13.6em;
+  }
+}
+
+@media (max-width: 700px) {
+  .button-container {
+    > button {
+      width: 10rem;
+      height: 2.5rem;
+    }
+  }
+
+  .button-wrapper::before {
+    bottom: 3.1em;
+  }
+
+  .button-wrapper::after {
+    right: 10.6em;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 4rem 1rem;
+  }
+
+  .button-container {
+    > button {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .button-container {
+    > button {
+      font-size: 0.8rem;
+      width: 8rem;
+      height: 2rem;
+    }
+  }
+
+  .button-wrapper {
+    > div {
+      border-top: 9px solid white;
+      border-left: 14px solid white;
+    }
+  }
+
+  .button-wrapper::before {
+    bottom: 2.6em;
+    z-index: 20;
+  }
+
+  .button-wrapper::after {
+    right: 8.9em;
+  }
+}

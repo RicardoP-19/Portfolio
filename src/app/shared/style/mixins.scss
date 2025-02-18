@@ -22,7 +22,7 @@
   color: $c;
 }
 
-@mixin button-white($w: 12rem, $bw: 1px 5px 4px 1px, $h: 2.8rem, $fs: 1.3em, $bc: $white, $c: $white, $bgc: $black, $hbc: $white, $hc: $black) {
+@mixin button-white($w: 12rem, $h: 2.8rem, $bw: 1px 5px 4px 1px, $fs: 1.3em, $bc: $white, $c: $white, $bgc: $black, $hbc: $white, $hc: $black) {
   width: $w;
   height: $h;
   font-size: $fs;
