@@ -26,23 +26,28 @@ export class SkillsComponent {
   ]
 
   @ViewChild('stickerTop') stickerTop!: ElementRef;
+  @ViewChild('stickerBottom') stickerText!: ElementRef;
   @ViewChild('stickerTopContent') stickerTopContent!: ElementRef;
 
   startAnimation(): void {
     const stickerElementTop = this.stickerTop.nativeElement;
     const stickerTopContent = this.stickerTopContent.nativeElement;
+    const stickerElementBottom = this.stickerText.nativeElement;
 
     stickerElementTop.classList.add('animate');
     stickerTopContent.classList.add('d-none');
     setTimeout(() => {
           stickerElementTop.classList.add('d-none');
+          stickerElementBottom.classList.remove('d-none');
     }, 500);
   }
 
   endeAnimation(): void {
+    const stickerElementBottom = this.stickerText.nativeElement;
     const stickerElementTop = this.stickerTop.nativeElement;
     const stickerTopContent = this.stickerTopContent.nativeElement;
 
+    stickerElementBottom.classList.add('d-none');
     stickerElementTop.classList.remove('animate', 'd-none');
     stickerTopContent.classList.remove('d-none');
   }
