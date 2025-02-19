@@ -1,11 +1,25 @@
 <header>
-  @if (responsiveService.isMobile | async) {
-    <h1>test</h1>
-  } @else  {
-    <div class="main">
-      <div class="logo" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
+  <div class="main" [ngStyle]="{'flex-direction': burgeMenuOpen ? 'column' : 'row'}">
+    @if (responsiveService.isMobile | async) {
+      <div class="mobile-header">
+        <div>
+          <a href="/">
+            <img class="mobile-logo" src="./../../../../../assets/project_images_icons/logo/logo_blue.png" alt="Logo">
+          </a>
+        </div>
+        <div>
+          <img class="mobile-menu" (click)="openBurgerMenu()" src="./../../../../../assets/project_images_icons/mobile/menu.png" alt="Menu">
+        </div>
+      </div>
+      <app-burger-menu 
+        [ngClass]="{'d-none' : !burgeMenuOpen}"
+        [ngStyle]="{'width' : '100%'}"
+        [burgerMenu]="burgeMenuOpen"
+      ></app-burger-menu>
+    } @else  {
+      <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
         <a href="/">
-          <img [src]="imageSrc" alt="Logo"/>
+          <img class="desktop-logo" [src]="imageSrc" alt="Logo"/>
         </a>
       </div>
       <nav class="menu-links">
@@ -71,7 +85,7 @@
             </defs>
           </svg> 
         </div>
-        <div class="scroll-container">
+        <div>
           <svg class="scrollball" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z" fill="#3355FF" stroke="#F8F9FA"/>
           </svg>
@@ -92,6 +106,6 @@
           </svg>
         </div>
       </div>
-    </div>
-  }
+    }
+  </div>
 </header>

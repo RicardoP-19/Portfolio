@@ -1,0 +1,36 @@
+<section [ngClass]="{'d-none' : !burgerMenu}">
+  <div class="background-wrapper">
+    <div class="menu-wrapper">
+      <nav>
+        <div>
+          <a href="#aboutMe">{{ 'HEADER.ABOUT_ME' | translate }}</a>
+        </div>
+        <div>
+          <a href="#skills">{{ 'HEADER.SKILLS' | translate }}</a>
+        </div>
+        <div>
+          <a href="#projects">{{ 'HEADER.PROJECTS' | translate }}</a>
+        </div>
+        <div>
+          <a href="#contact">{{ 'HEADER.CONTACT' | translate }}</a>       
+        </div>
+      </nav>
+      <div class="language-wrapper-mobile">
+        <div class="language-content-mobile">
+          <span (click)="changeLanguage('en')">EN</span>
+        </div>
+        <div>
+          <svg class="scrollball" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z" fill="#3355FF" stroke="#F8F9FA"/>
+          </svg>
+          <svg width="32" height="8" viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 0.5H28C29.933 0.5 31.5 2.067 31.5 4C31.5 5.933 29.933 7.5 28 7.5H4C2.067 7.5 0.5 5.933 0.5 4C0.5 2.067 2.067 0.5 4 0.5Z" fill="#F87A55" stroke="#F8F9FA"/>
+          </svg>
+        </div>
+        <div class="language-content-mobile">        
+          <span (click)="changeLanguage('de')">DE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,7 +3,6 @@
 
 section {
   @include d-flex();
-  height: calc(100vh + 12.5rem);
   background-image: url('./../../../assets/project_images_icons/background_images/background_top.png');
   background-position: bottom;
   background-size: cover;
@@ -12,6 +11,7 @@ section {
 
 .main {
   flex-direction: column;
+  height: calc(100vh + 14rem);
 }
 
 .headline-wrapper {

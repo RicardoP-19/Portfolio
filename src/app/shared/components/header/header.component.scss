@@ -6,7 +6,7 @@ header {
   z-index: 999;
   width: 100%;
   @include d-flex($jc: center, $g: 0px);
-  padding: 1.5rem 4.5rem;
+  padding: 1.5rem 3.5rem;
 }
 
 .main {
@@ -14,7 +14,22 @@ header {
   @include max-content()
 }
 
-.logo img{
+.mobile-header {
+  @include d-flex($jc: space-between);
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.mobile-logo {
+  width: 3.5rem;
+}
+
+.mobile-menu {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.desktop-logo {
   width: 5rem;
 }
 
@@ -109,4 +124,10 @@ header {
 
 .scroll-right {
   transform: translateX(100%);
+}
+
+@media (max-width: 940px) {
+  header {
+    padding: 1rem 0;
+  }
 }
