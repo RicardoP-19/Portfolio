@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { LanguageServiceService } from '../../services/language.service.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { ResponsivService } from '../../services/responsiv.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +15,8 @@ import { TranslateModule } from '@ngx-translate/core';
 
 export class HeaderComponent {
   languageService = inject(LanguageServiceService);
+  responsiveService = inject(ResponsivService);
+
   language: string = this.languageService.language;
   imageSrc: string = 'assets/project_images_icons/logo/logo_blue.png';
 
