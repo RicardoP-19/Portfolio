@@ -9,7 +9,7 @@ footer {
 .main {
   justify-content: space-between;
   align-items: end;
-  padding: 2rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .owner-container {
@@ -34,8 +34,8 @@ footer {
     color: white;
   }
   .legal-notice-frame {
-    @include frame($p: absolute, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 200%, $mp: 100% 100%, $v: hidden);
-    top: 0.6rem;
+    @include frame($p: absolute, $md: right, $mv: 50%, $mt: 51%, $ms: 300% 100%, $mp: 100% 100%, $v: hidden);
+    top: 1.1rem;
   }
 }
 
