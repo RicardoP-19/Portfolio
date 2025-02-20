@@ -1,13 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FooterComponent } from "../../shared/components/footer/footer.component";
-import { ignoreElements } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import path from 'path';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
-
+import { ResponsivService } from '../../shared/services/responsiv.service';
 @Component({
   selector: 'app-contact-me',
   standalone: true,
@@ -16,13 +14,19 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+  http = inject(HttpClient);
+  responsivService = inject(ResponsivService);
+  isMobile: boolean = false;
   isChecked: boolean = false;
   reviewCheck: boolean = false;
   stickerTextEn = ' Ricardo Pinto - Frontend Developer -'.split('');
   stickerTextDe = ' Ricardo Pinto - Frontend Entwickler -'.split('');  
-  http = inject(HttpClient);
 
-  constructor(public translate: TranslateService) {}
+  constructor(public translate: TranslateService) {
+    this.responsivService.isMobile.subscribe((isMobile) => {
+      this.isMobile = isMobile;
+    });
+  }
 
   contactData = {
     name: "",
