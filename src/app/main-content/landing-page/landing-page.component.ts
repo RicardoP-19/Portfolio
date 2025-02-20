@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ResponsivService } from '../../shared/services/responsiv.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -11,11 +12,18 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 
 export class LandingPageComponent {
+  responsivService = inject(ResponsivService);
+
+  isMobileValue: boolean = false;
   hoverIndexTop: number | null = null;
   hoverIndexBottom: number | null = null;
   isHovered = false;
 
-  constructor(public translate: TranslateService) {}
+  constructor(public translate: TranslateService) {
+    this.responsivService.isMobile.subscribe(isMobile => {
+      this.isMobileValue = isMobile;
+    });
+  }
 
   headlineText = {  
     frontend: {
@@ -33,7 +41,9 @@ export class LandingPageComponent {
   }
 
   mouseOverTop(index: number) {
-    this.hoverIndexTop = index;
+    if (!this.isMobileValue) {
+      this.hoverIndexTop = index;
+    }
   }
 
   mouseOutTop() {
@@ -41,7 +51,9 @@ export class LandingPageComponent {
   }
 
   mouseOverBottom(index: number) {
-    this.hoverIndexBottom = index;
+    if (!this.isMobileValue) {
+      this.hoverIndexBottom = index;
+    }
   }
 
   mouseOutBottom() {
