@@ -26,8 +26,9 @@ section {
 
 .provider-content {
   @include writing($fs: 1.5rem, $fw: 400, $c: $black);
-  @include d-flex($ai: start, $g: 1rem);
+  @include d-flex($ai: center, $g: 1rem);
   flex-direction: column;
+  padding: 1rem;
   > h1 {
     @include writing($fs: 4rem, $fw: 700, $c: $black);
     margin: 0;
@@ -40,4 +41,13 @@ section {
   background-image: url('./../../assets/project_images_icons/background_images/background_bottom_small.png');
   background-position: top;
   background-size: cover;
+}
+
+@media (max-width: 440px) {
+  .provider-content {
+    font-size: 1rem;
+    > h1 {
+      font-size: 3rem;
+    }
+  }
 }
