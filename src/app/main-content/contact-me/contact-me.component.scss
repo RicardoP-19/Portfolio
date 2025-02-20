@@ -228,6 +228,11 @@ hr {
 
   .send-button {
     gap: 2rem;
+    > button:hover {
+      transform: none !important;
+      border-width: 1px 5px 4px 1px;
+      background-color: transparent;
+    }
   }
 
   svg.form-animation {
