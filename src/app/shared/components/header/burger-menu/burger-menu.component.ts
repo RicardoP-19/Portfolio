@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, Output, EventEmitter } from '@angular/core';
 import { LanguageServiceService } from '../../../services/language.service.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -13,9 +13,14 @@ import { TranslateModule } from '@ngx-translate/core';
 
 export class BurgerMenuComponent {
   @Input() burgerMenu: boolean = false;
-  languageService = inject(LanguageServiceService);
+  @Output() closeMenu: EventEmitter<void> = new EventEmitter<void>();
 
+  languageService = inject(LanguageServiceService);
   language: string = this.languageService.language;
+
+  closeBurgerMenu(): void {
+    this.closeMenu.emit();
+  }
 
   changeLanguage(language: string) {
     this.languageService.changeLanguage(language);
