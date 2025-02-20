@@ -137,6 +137,13 @@ section {
     > button {
       width: 13rem;
       height: 3.5rem;
+      &:hover {
+        color: $black;
+        border-width: 1px 5px 4px 1px;
+        background-color: transparent !important;
+        transition: none !important;
+        transform: none !important;
+      }
     }
   }
 
