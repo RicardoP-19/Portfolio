@@ -211,6 +211,15 @@ section {
     width: auto;
   }
 
+  .container-button {
+   > a button:hover {
+    border-width: 1px 5px 4px 1px;
+    background-color: transparent !important;
+    transition: none !important;
+    transform: none !important;
+   }
+  }
+
   .polaroid-desktop,
   .links-wrapper {
     display: none;
@@ -248,7 +257,7 @@ section {
 @media (max-width: 450px) {
   .headine-text {
     > p {
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
 
@@ -259,6 +268,14 @@ section {
       top: 13px;
       width: 10rem;
       height: 10rem;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .headine-text {
+    > p {
+      font-size: 3.3rem;
     }
   }
 }
