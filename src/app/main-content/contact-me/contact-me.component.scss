@@ -265,4 +265,10 @@ hr {
     top: 1rem;
     left: 2.5rem;
   }
+
+  .inputs-wrapper {
+    > div textarea {
+      width: 100%;
+    }
+  }
 }
