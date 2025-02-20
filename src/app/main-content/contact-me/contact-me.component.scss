@@ -19,7 +19,6 @@ section {
 }
 
 .sticker-mobile {
-  display: none;
   position: relative;
   left: 12.5rem;
   background-image: url('./../../../assets/project_images_icons/stickers/orange.png');
@@ -218,12 +217,7 @@ hr {
     }
 
   .sticker-mobile {
-    display: unset;
-    top: 2.5rem;
-  }
-
-  .sticker-desktop {
-    display: none;
+    top: 4rem;
   }
 
   .send-button {
