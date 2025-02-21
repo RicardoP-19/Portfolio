@@ -73,7 +73,7 @@ section {
   @include d-flex($jc: end, $ai: none, $g: 0rem);
   width: 100%;
   padding-top: 1.5em;
-  >a button {
+  > a button {
     @include button-white($w: 9rem, $bw: 1px 5px 4px 1px,  $bc: $black, $c: $black, $bgc: $white, $hbc: $black, $hc: $white);
   }
 }
