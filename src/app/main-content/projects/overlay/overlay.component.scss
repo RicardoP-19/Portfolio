@@ -13,26 +13,21 @@ section {
 }
 
 .overlay-background {
-  @include d-flex($jc: center, $g: 1.5rem);
+  @include d-flex();
   flex-direction: column;
   background-image: url('./../../../../assets/project_images_icons/background_images/note_book_paper.png');
-  background-position: 0;
+  background-position: top;
   background-size: cover;
   background-color: #1D1D1D;
   height: 100%;
-  // width: 100%;
   max-width: 1920px;
 }
 
-// .overlay-header {
-//   width: 100%;
-// }
-
 .overlay-wrapper {
-  @include d-flex($jc: center, $ai: none);
+  @include d-flex($jc: center, $ai: none, $g: 5rem);
   flex-direction: column;
   height: 100%;
-  padding: 0 4.5rem;
+  padding: 2rem;
 }
 
 .overlay-animation {
@@ -61,8 +56,9 @@ section {
 }
 
 .overlay-content {
-  @include d-flex($jc: space-between, $g: 6rem);
-  padding: 0.5rem 3rem;
+  @include d-flex($jc: space-between);
+  height: 70%;
+  padding: 1rem 3rem;
 }
 
 .content-left {
@@ -128,7 +124,7 @@ section {
 }
 
 .content-right {
-  @include d-flex($g: 3rem);
+  @include d-flex($g: 2rem);
   flex-direction: column;
   width: 50%;
   > img {
@@ -163,5 +159,163 @@ section {
   @include writing($fs: 1.1rem, $fw: 700, $c: $white);
   &:hover {
     color: $yellow;
+  }
+}
+
+@media (max-width: 1100px) {
+  .project-infos {
+    padding-top: 0.5rem;
+  }
+
+  .content-headline {
+    font-size: 3rem;
+  }
+
+  .info-text {
+    > span {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  section {
+    display: block;
+  }
+
+  .overlay-wrapper {
+    gap: 0;
+    padding: 5rem;
+  }
+
+  .overlay-background{
+    display: block;
+    height: auto;
+    background-image: url('./../../../../assets/project_images_icons/background_images/note_paper_mobile.png');
+    background-position: 0;
+    background-size: 100% 100%;
+  }
+
+  .close-overlay img {
+    filter: invert(1);
+  }
+
+  .overlay-content {
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    padding: 2rem 0rem;
+  }
+
+  .content-left {
+    width: 100%;
+  }
+
+  .content-right {
+    width: 90%;
+  }
+
+  .project-infos {
+    width: 100%;
+  }
+
+  .content-right {
+    > div button {
+      width: 6em;
+      height: 2.5em;
+      border-width: 1px 5px 4px 1px !important;
+      transition: none !important;
+      transform: none !important;
+      background-color: transparent !important;
+    }
+  }
+
+  .change-project {
+    margin-top: 1.8rem;
+  }
+
+  .back {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .next:hover {
+    color: $white;
+  }
+}
+
+@media (max-width: 750px) {
+  .overlay-wrapper {
+    padding: 2rem;
+  }
+
+  .content-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .overlay-wrapper {
+    padding: 1rem;
+  }
+
+  .overlay-content {
+    gap: 1rem;
+  }
+
+  .content-right {
+    > div button {
+      height: 2.5em;
+      font-size: 1.1em;
+    }
+  }
+
+  .change-project {
+    padding: 0;
+  }
+
+  .back {
+    font-size: 1em;
+  }
+
+  .next {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .overlay-wrapper {
+    padding: 0.5rem;
+  }
+
+  .content-headline {
+    font-size: 2.5rem;
+  }
+
+  .info-text p{
+    font-size: 1.3rem;
+  }
+
+  .headline-animation {
+    width: 250px;
+  }
+
+  .content-left {
+    padding: 0rem 0 5rem 0;
+  }
+
+  .back {
+    font-size: 0.8em;
+  }
+
+  .next {
+    font-size: 0.8em;
+  }
+
+  .change-project {
+    margin: 0;
   }
 }
