@@ -10,5 +10,6 @@ export interface Project {
   durationDe: string;
   skills: { path: string; name: string }[];
   gitHub: string;
-  liveTest: string; 
+  liveTest: string;
+  svg: number;
 }

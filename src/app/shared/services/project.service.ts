@@ -25,7 +25,8 @@ export class ProjectService {
         {path: './assets/project_images_icons/icons/skills/js.png', name: 'Javascript'}
       ],
       gitHub: 'https://github.com/RicardoP-19/Pokedex',
-      liveTest: 'https://pokedex.ricardo-pinto.com'
+      liveTest: 'https://pokedex.ricardo-pinto.com',
+      svg: 200
     },
     {
       title: 'Join',
@@ -45,7 +46,8 @@ export class ProjectService {
         {path: './assets/project_images_icons/icons/skills/firebase.png', name: 'Firebase'}
       ],
       gitHub: 'https://github.com/RicardoP-19/Join',
-      liveTest: 'https://join.ricardo-pinto.com'
+      liveTest: 'https://join.ricardo-pinto.com',
+      svg: 120
     },
     {
       title: 'El Pollo Loco',
@@ -62,7 +64,8 @@ export class ProjectService {
         {path: './assets/project_images_icons/icons/skills/js.png', name: 'Javascript'}
       ],
       gitHub: 'https://github.com/RicardoP-19/El-Pollo-Loco',
-      liveTest: 'https://game.ricardo-pinto.com'
+      liveTest: 'https://game.ricardo-pinto.com',
+      svg: 300
     },
   ]
 
