@@ -38,8 +38,8 @@
         </div>
         <div class="link-content">
           <a href="#skills">{{ 'HEADER.SKILLS' | translate }}</a>
-          <svg class="skills-frame" width="69" height="42" viewBox="0 0 69 42" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <rect x="0.539062" width="68" height="42" fill="url(#pattern0_3635_8522)"/>
+          <svg class="skills-frame" [attr.width]="language == 'en' ? '69' : '130'" height="42" [attr.viewBox]="language == 'en' ? '0 0 69 42' : '0 0 130 42'" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect x="0.539062" [attr.width]="language == 'en' ? '69' : '130'" height="42" fill="url(#pattern0_3635_8522)"/>
             <defs>
             <pattern id="pattern0_3635_8522" patternContentUnits="objectBoundingBox" width="1" height="1">
             <use xlink:href="#image0_3635_8522" transform="matrix(0.00490196 0 0 0.00793651 -0.27451 0)"/>

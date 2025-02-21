@@ -47,8 +47,8 @@ section {
 }
 
 .close-overlay {
-  @include d-flex($jc: end);
-  cursor: pointer;
+  @include d-flex($jc: end);  
+  @include cursor();
   > img {
     width: 2em;
     height: auto;
@@ -99,7 +99,8 @@ section {
   > p {
     @include writing($fs: 1.5rem, $fw: 700);
     margin: 0;
-  } > span {
+  } 
+  > span {
     @include writing($fs: 1.1rem, $fw: 400);
   }
 }
@@ -108,7 +109,8 @@ section {
   @include d-flex($g: 0.5rem);
   > p {
     @include writing($fs: 1.1rem, $fw: 700);
-  } > span {
+  } 
+  > span {
     @include writing($fs: 1.1rem, $fw: 400);
   }
 }
@@ -118,7 +120,8 @@ section {
   > img {
     width: 1.5em;
     height: 1.5em;
-  } > p {
+  } 
+  > p {
     margin: 0;
   }
 }
@@ -130,10 +133,12 @@ section {
   > img {
     width: 100%;
     border-radius: 20px;
-  } > div {
+  } 
+  > div {
     @include d-flex($jc: end, $g:1.7rem);
     width: 100%;
-  } > div button {
+  } 
+  > div button {
     @include button-white($w: 8rem, $hc: $white);
   }
 }
@@ -144,7 +149,7 @@ section {
   width: 100%;
   > div {
     @include d-flex($ai: center, $g: 1rem);
-    cursor: pointer;
+    @include cursor();
   }
 }
 

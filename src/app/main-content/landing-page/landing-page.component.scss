@@ -106,7 +106,7 @@ section {
   width: 13rem;
   height: 15rem;
   transform: rotate(10deg);
-  >div {
+  > div {
     @include d-flex($jc: center, $ai: center, $g: 0.5em);
     @include writing($fs: 1.5rem, $fw: 700, $c: $black);
     font-family: 'Kalam-Bold';
@@ -150,7 +150,7 @@ section {
   @include d-flex($jc: end, $ai: none, $g: 0rem);
   width: 100%;
   padding-top: 1em;
-  >a button {
+  > a button {
     @include button-white($hc: $white);
   }
 }
