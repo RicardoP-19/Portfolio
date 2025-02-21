@@ -40,6 +40,7 @@ section {
       @include writing($fs: 1.2rem, $fw: 500, $c: $white);
     } > span {
       @include writing($fs: 4rem, $fw: 700, $c: $white);
+      word-break: break-word;
     }
   } 
   > div:nth-child(2) > span {
@@ -111,7 +112,7 @@ form {
         color: $orange;
       }
     }
-    > input ,textarea {
+    > input, textarea {
       @include writing($fs: 1.1rem, $fw: 400, $c: $yellow);
       @include cursor();
       width: 70%;
@@ -147,12 +148,12 @@ hr {
 }
 
 .checkbox-send-wrapper {
-  @include d-flex($ai: none, $g: 2rem);
+  @include d-flex($ai: none, $g: 6rem);
   flex-direction: column;
 }
 
 .checkbox-container {
-  @include d-flex($jc: space-between, $ai: start, $g:1rem);
+  @include d-flex($jc: space-between, $ai: start, $g:1.5rem);
   flex-direction: column;
   height: 4rem;
 }
@@ -235,21 +236,42 @@ hr {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .main {
     padding: 7rem 1rem 0;
     > div:nth-child(3) {
       width: 100%;
-      }
     }
+  }
+}
 
+@media (max-width: 600px) {
   .sticker-mobile {
     top: 3.5rem;
-    left: 5.5rem;
+    left: 8.5rem;
+  }
+
+  .contact-me-wrapper {
+    > div:nth-child(1)> span{
+      font-size: 3rem !important;
+    }
+    > div:nth-child(2)> span {
+      font-size: 1rem !important;
+    }
+  }
+
+  .inputs-wrapper {
+    > div > label {
+      font-size: 1.1rem;
+    } 
   }
 }
 
 @media (max-width: 500px) {
+  .sticker-mobile {
+    left: 6rem;
+  }
+
   .send-button {
     gap: 1rem;
   }
@@ -267,8 +289,11 @@ hr {
   }
 
   .inputs-wrapper {
-    > div textarea {
-      width: 100%;
+    > div {
+      > input, textarea {
+        font-size: 0.8rem;
+        width: 100%;
+      }
     }
   }
 }

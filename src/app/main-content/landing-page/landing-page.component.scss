@@ -257,11 +257,11 @@ section {
 @media (max-width: 450px) {
   .headine-text {
     > p {
-      font-size: 4rem;
+      font-size: 3.3rem;
     }
   }
 
-    .polaroid {
+  .polaroid {
     width: 13rem;
     height: 14rem;
     > img {
@@ -275,7 +275,7 @@ section {
 @media (max-width: 380px) {
   .headine-text {
     > p {
-      font-size: 3.3rem;
+      font-size: 3rem;
     }
   }
 }

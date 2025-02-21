@@ -22,12 +22,5 @@ export class LanguageServiceService {
     this.language = language;
     sessionStorage.setItem('language', this.language);
     this.translate.use(this.language);
-    const scrollball = document.querySelector('.scrollball') as HTMLElement;
-    scrollball.classList.remove('scroll-left', 'scroll-right');
-    if (language == 'en') {
-      scrollball.classList.add('scroll-left');
-    } else if (language == 'de') {
-      scrollball.classList.add('scroll-right');
-    }
   }
 }

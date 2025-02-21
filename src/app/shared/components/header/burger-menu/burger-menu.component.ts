@@ -18,13 +18,12 @@ export class BurgerMenuComponent {
   languageService = inject(LanguageServiceService);
   language: string = this.languageService.language;
 
-  closeBurgerMenu(): void {
-    this.closeMenu.emit();
-  }
-
   changeLanguage(language: string) {
     this.languageService.changeLanguage(language);
     this.language = language;
   }
 
+  closeBurgerMenu(): void {
+    this.closeMenu.emit();
+  }
 }
