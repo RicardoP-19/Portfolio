@@ -115,8 +115,13 @@ section {
   }
 }
 
+.skills-wrapper {
+  @include d-flex($jc: start, $g: 0.7rem);
+  flex-wrap: wrap;
+}
+
 .skills-used {
-  @include d-flex($jc: start, $g: 0.3rem);
+  @include d-flex($g: 0.3rem);
   > img {
     width: 1.5em;
     height: 1.5em;

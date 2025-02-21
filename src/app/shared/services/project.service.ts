@@ -65,7 +65,7 @@ export class ProjectService {
       ],
       gitHub: 'https://github.com/RicardoP-19/El-Pollo-Loco',
       liveTest: 'https://game.ricardo-pinto.com',
-      svg: 300
+      svg: 290
     },
   ]
 

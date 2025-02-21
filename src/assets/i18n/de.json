@@ -49,7 +49,7 @@
   },
   "CONTACT_ME": {
     "ME": "Kontakt",
-    "TITLE": "Bereit zur Zusammenarbeit?",
+    "TITLE": "Bereit, gemeinsam loszulegen?",
     "TEXT_TOP": "Kontaktieren Sie mich gerne über dieses Formular – ich freue mich darauf, von Ihnen zu hören! Teilen Sie Ihre Ideen und Projektanforderungen mit mir, und lassen Sie uns gemeinsam etwas Großartiges erschaffen.",
     "TEXT_BOTTOM": "Ob Website, Webanwendung oder eine maßgeschneiderte digitale Lösung – ich bringe mein Wissen und meine Erfahrung ein, um Ihre Vision bestmöglich umzusetzen. Ich freue mich auf Ihre Nachricht!",
     "FORM": {
@@ -64,7 +64,7 @@
       "TEXTAREA_PLACEHOLDER_ERROR": "Was müssen Sie entwickeln?",
       "CHECKBOX_FIRST_TEXT": "Ich habe die",
       "CHECKBOX_PRIVACY": " Datenschutzbestimmungen ",
-      "CHECKBOX_END_TEXT": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+      "CHECKBOX_END_TEXT": "gelesen und stimme der Datenverarbeitung zu.",
       "CHECKBOX_TEXT_ERROR": "Bitte akzeptieren Sie die Datenschutzbestimmungen",
       "BUTTON": "Senden"
     }    

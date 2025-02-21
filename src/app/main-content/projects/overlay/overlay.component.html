@@ -43,10 +43,12 @@
                 <span>{{project?.durationDe}}</span>
               }
             </div>
-            <div class="skills-used">
+            <div class="skills-wrapper">
               @for (skills of project?.skills; track $index) {
-                <img src="{{skills.path}}" alt="Skill">
-                <p>{{skills.name}}</p>
+                <div class="skills-used">
+                  <img src="{{skills.path}}" alt="Skill">
+                  <p>{{skills.name}}</p>
+                </div>
               }
             </div>
           </div>

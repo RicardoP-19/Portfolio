@@ -17,13 +17,15 @@ export class HeaderComponent {
   languageService = inject(LanguageServiceService);
   responsiveService = inject(ResponsivService);
 
-  language: string = this.languageService.language;
   imageSrc: string = 'assets/project_images_icons/logo/logo_blue.png';
   burgeMenuOpen: boolean = false;
 
+  get language(): string {
+    return this.languageService.language;
+  }
+
   changeLanguage(language: string) {
     this.languageService.changeLanguage(language);
-    this.language = language;
   }
 
   onMouseOver() {
