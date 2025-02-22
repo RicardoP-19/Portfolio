@@ -19,13 +19,14 @@ export class AppComponent implements OnInit{
   showIntro: boolean = true;
 
   ngOnInit():void {
-    if (sessionStorage.getItem('introShown')) {
+    const introPlayed = sessionStorage.getItem('introPlayed');
+    if (introPlayed) {
       this.showIntro = false;
     } else {
       setTimeout(() => {
         this.showIntro = false;
-        sessionStorage.setItem('introShown', 'true');
-      }, 5100);
+        sessionStorage.setItem('introPlayed', 'true');
+      }, 4100);
     }
 
     AOS.init({
