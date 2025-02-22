@@ -5,149 +5,172 @@ section {
   @include d-flex();
   width: 100vw;
   height: 100vh;
-  background-color: $black;
+  background-image: url('./../../assets/project_images_icons/background_images/intro.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.intro-container.fade-out {
-  transition: opacity 1s ease-out;
-}
-
-.intro-wrapper {
-  @include d-flex();
-  width: 100%;
+.intro-wrapper-new {
+  @include d-flex($g: 4rem);
+  flex-direction: column;
   > span {
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 20rem;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    background-image: linear-gradient(
-      180deg,
-      hsl(231deg 74% 53%) 0%,
-      hsl(231deg 70% 52%) 12%,
-      hsl(231deg 66% 50%) 18%,
-      hsl(231deg 65% 49%) 22%,
-      hsl(231deg 64% 47%) 26%,
-      hsl(231deg 64% 46%) 29%,
-      hsl(231deg 64% 44%) 33%,
-      hsl(231deg 64% 43%) 36%,
-      hsl(231deg 64% 42%) 39%,
-      hsl(231deg 63% 40%) 42%,
-      hsl(231deg 63% 39%) 44%,
-      hsl(231deg 63% 37%) 47%,
-      hsl(231deg 63% 36%) 50%,
-      hsl(231deg 63% 35%) 53%,
-      hsl(231deg 62% 34%) 56%,
-      hsl(231deg 62% 32%) 58%,
-      hsl(231deg 62% 31%) 61%,
-      hsl(231deg 62% 30%) 64%,
-      hsl(231deg 62% 29%) 67%,
-      hsl(231deg 62% 28%) 71%,
-      hsl(231deg 62% 27%) 74%,
-      hsl(231deg 62% 26%) 78%,
-      hsl(231deg 62% 25%) 82%,
-      hsl(231deg 62% 24%) 88%,
-      hsl(232deg 62% 23%) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: textAnimation 3s ease 0s 1 normal forwards;
-    overflow: hidden;
+    @include writing($fs: 6rem, $fw: 700, $c: $white);
   }
 }
 
-.glanz-textR::after,
-.glanz-textP::after  {
-  content: "R";
+.roll-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent 20%, #fcd02ed0 50%, transparent 80%);
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  top: 8rem;
+  animation: roll-in-left 2s ease-out forwards;
+  > img {
+    width: 7.5rem;
+    animation: wobble-hor-bottom 0.8s infinite forwards;
+    animation-delay: 2.1s;
+  }
+}
+
+.welcome-text span {
+  @include writing($fs: 11rem, $fw: 800, $c: $white);
   opacity: 0;
-  animation: shine 3s ease-out 3.2s 1 forwards;
+  animation: fadeIn 2s ease-in forwards;
 }
 
-.glanz-textP::after {
-  content: "P";
+.welcome-text span:nth-child(1) { animation-delay: 0s; }
+.welcome-text span:nth-child(2) { animation-delay: 0.2s; }
+.welcome-text span:nth-child(3) { animation-delay: 0.5s; }
+.welcome-text span:nth-child(4) { animation-delay: 0.8s; }
+.welcome-text span:nth-child(5) { animation-delay: 1.1s; }
+.welcome-text span:nth-child(6) { animation-delay: 1.4s; }
+.welcome-text span:nth-child(7) { animation-delay: 1.7s; }
+
+.portfolio-text {
+  @include writing($fs: 7rem, $fw:700, $c: $white)
 }
 
-.glanz-textP {
-  position: relative;
-  left: -1.5rem;
-  bottom: -6.2rem;
+.smiley {
+  @include d-flex($jc: end);
+  @include writing($fs: 5rem, $fw: 500, $c: $white);
+  font-family: 'Kalam-Bold';
+  transform: rotate(4deg);
 }
 
-.glanz-text.finished {
-  background-image: linear-gradient(
-    180deg,
-    hsl(231deg 74% 53%) 0%,
-    hsl(231deg 70% 52%) 12%,
-    hsl(231deg 66% 50%) 18%,
-    hsl(231deg 65% 49%) 22%,
-    hsl(231deg 64% 47%) 26%,
-    hsl(231deg 64% 46%) 29%,
-    hsl(231deg 64% 44%) 33%,
-    hsl(231deg 64% 43%) 36%,
-    hsl(231deg 64% 42%) 39%,
-    hsl(231deg 63% 40%) 42%,
-    hsl(231deg 63% 39%) 44%,
-    hsl(231deg 63% 37%) 47%,
-    hsl(231deg 63% 36%) 50%,
-    hsl(231deg 63% 35%) 53%,
-    hsl(231deg 62% 34%) 56%,
-    hsl(231deg 62% 32%) 58%,
-    hsl(231deg 62% 31%) 61%,
-    hsl(231deg 62% 30%) 64%,
-    hsl(231deg 62% 29%) 67%,
-    hsl(231deg 62% 28%) 71%,
-    hsl(231deg 62% 27%) 74%,
-    hsl(231deg 62% 26%) 78%,
-    hsl(231deg 62% 25%) 82%,
-    hsl(231deg 62% 24%) 88%,
-    hsl(232deg 62% 23%) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-
-@keyframes textAnimation {
+@keyframes roll-in-left {
   0% {
-    transform: scale(0);
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes shine {
-  0% {
+    transform: translateX(660%) rotate(360deg);
     opacity: 1;
-    background-position: -250% 0;
-  }
-  100% {
-    opacity: 0;    
-    background-position: 250% 0;
   }
 }
 
-@media (max-width: 430px) {
-  .intro-wrapper {
+@keyframes wobble-hor-bottom {
+  15% {
+    transform: translateX(-8px) rotate(-3deg);
+  }
+  30% {
+    transform: translateX(8px) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-6px) rotate(-2deg);
+  }
+  60% {
+    transform: translateX(4px) rotate(1.5deg);
+  }
+  75% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1070px) {
+  .intro-wrapper-new {
     > span {
-      font-size: 15rem;
-    } 
+      font-size: 5rem;
+    }
   }
 
-  .glanz-textP {
-    left: -1rem;
-    bottom: -4.4rem;
+  .roll-container {
+    animation: roll-in-left-small 2s ease-out forwards;
+  }
+
+  @keyframes roll-in-left-small {
+    0% {
+      transform: translateX(0) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(555%) rotate(360deg); 
+      opacity: 1;
+    }
+  }
+
+  .welcome-text span{
+    font-size: 9.2rem;
+  }
+
+  .portfolio-text {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 940px) {
+  .roll-container {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 670px) {
+  .welcome-text span {
+    font-size: 8rem;
+  }
+
+  .intro-wrapper-new {
+    > span {
+      font-size: 3.5rem;
+    }
+  }
+
+  .portfolio-text {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .welcome-text span {
+    font-size: 6rem;
+  }
+
+  .intro-wrapper-new {
+    > span {
+      font-size: 2rem;
+    }
+  }
+
+  .portfolio-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .welcome-text span {
+    font-size: 4.3rem;
+  }
+
+  .intro-wrapper-new {
+    > span {
+      font-size: 2rem;
+    }
+  }
+
+  .portfolio-text {
+    font-size: 3.5rem;
   }
 }
