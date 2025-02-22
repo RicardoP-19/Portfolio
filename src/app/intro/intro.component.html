@@ -1,8 +1,35 @@
 <section [class.fade-out]="!showIntro">
   <div  class="main">
-    <div class="intro-wrapper">
-      <span class="glanz-textR">R</span>
-      <span class="glanz-textP">P</span>
+    <div class="intro-wrapper-new">
+      <div>
+        <div [ngClass]="{'d-none' : isMobileValue}" class="roll-container">
+            <img src="./../../assets/project_images_icons/icons/top_area/waving_hand.png" alt="Hand">
+        </div>
+        <div class="welcome-text">
+          <span [ngStyle]="{'color' : '#F7C518'}">W</span>
+          <span>e</span>
+          <span [ngStyle]="{'color' : '#F7C518'}">L</span>
+          <span>c</span>
+          <span [ngStyle]="{'color' : '#F7C518'}">O</span>
+          <span>m</span>
+          <span [ngStyle]="{'color' : '#F7C518'}">E</span> 
+        </div> 
+      </div>
+      <span>to MY</span>
+      <div class="portfolio-text">
+        <span>P</span>
+        <span [ngStyle]="{'color' : '#F7C518'}">o</span>
+        <span>R</span>
+        <span [ngStyle]="{'color' : '#F7C518'}">t</span>
+        <span>F</span>
+        <span [ngStyle]="{'color' : '#F7C518'}">o</span>
+        <span>L</span>
+        <span [ngStyle]="{'color' : '#F7C518'}">i</span>
+        <span>O</span>
+          <div [ngClass]="{'d-none' : !isMobileValue}" class="smiley">
+            <span>:D</span>
+          </div>
+      </div>
     </div>
   </div>
 </section>
