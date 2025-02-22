@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
       setTimeout(() => {
         this.showIntro = false;
         sessionStorage.setItem('introPlayed', 'true');
-      }, 4100);
+      }, 4600);
     }
 
     AOS.init({
