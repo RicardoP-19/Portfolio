@@ -4,10 +4,10 @@
 section {
   @include d-flex();
   width: 100%;
+  padding: 1.5rem;
 }
 
 .main {
-  padding: 2rem 4rem;
   > div {
     @include d-flex();
     flex-direction: column;
@@ -72,7 +72,7 @@ section {
 .container-button {
   @include d-flex($jc: end, $ai: none, $g: 0rem);
   width: 100%;
-  padding-top: 1.5em;
+  padding: 1.5em;
   > a button {
     @include button-white($w: 9rem, $bw: 1px 5px 4px 1px,  $bc: $black, $c: $black, $bgc: $white, $hbc: $black, $hc: $white);
   }
@@ -88,7 +88,6 @@ section {
 @media(max-width: 940px) {
   .main {
     flex-direction: column-reverse;
-    padding: 2rem 3rem;
     > div {
       width: 100%;
       padding: 0;
@@ -106,28 +105,28 @@ section {
   }
 
   .paper {
-    width: 23rem;
-    height: 6rem;
+    width: 27rem;
+    height: 7rem;
     > img {
       width: 2em;
     }
   }
 
   .yellow {
-    top: 2.4rem;
+    top: 2rem;
   }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 470px) {
   .paper {
     width: 18rem;
-    height: 5.5rem;
+    height: 5rem;
     > img {
       width: 1.5em;
     }
   }
 
   .yellow {
-    top: 1.8rem;
+    top: 1.5rem;
   }
 }

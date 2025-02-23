@@ -7,11 +7,12 @@ section {
   background-image: url('./../../../assets/project_images_icons/background_images/background_bottom.png');
   background-position: top;
   background-size: cover;
+  padding: 1.5rem;
 }
 
 .main {
   gap: 7rem;
-  padding: 7rem 4rem 0;
+  padding-top: 7rem;
   color: white;
   > div {
     width: 50%;
@@ -237,7 +238,7 @@ hr {
 
 @media (max-width: 700px) {
   .main {
-    padding: 7rem 1rem 0;
+    padding-top: 4rem;
     > div:nth-child(3) {
       width: 100%;
     }
@@ -284,12 +285,12 @@ hr {
 @media (max-width: 400px) {
   .sticker-mobile {
     top: 1rem;
-    left: 2.5rem;
+    left: 4rem;
   }
 
   .inputs-wrapper {
     > div {
-      > input, textarea {
+      > input, textarea, span {
         font-size: 0.8rem;
       }
     }
