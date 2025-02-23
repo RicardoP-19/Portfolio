@@ -59,6 +59,7 @@
       "EMAIL": "What`s your email?",
       "EMAIL_PLACEHOLDER": "youremail@email.com",
       "EMAIL_PLACEHOLDER_ERROR": "Hoppla! your email is required",
+      "EMAIL_NOT_VALID": "Please enter a valid email address.",
       "TEXTAREA": "How can I help you?",
       "TEXTAREA_PLACEHOLDER": "Hello Ricardo, I am interested in..",
       "TEXTAREA_PLACEHOLDER_ERROR": "What do you need to develop?",

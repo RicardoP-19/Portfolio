@@ -97,7 +97,12 @@
           <div [ngStyle]="{padding: '1rem 1.4rem'}">
             <label for="email">{{ 'CONTACT_ME.FORM.EMAIL' | translate }}</label>
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" 
-            [placeholder]="!email.valid && email.touched ? ('CONTACT_ME.FORM.EMAIL_PLACEHOLDER_ERROR' | translate) : ('CONTACT_ME.FORM.EMAIL_PLACEHOLDER' | translate)" [ngClass]="{'error-placeholder': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            [placeholder]="!email.valid && email.touched ? ('CONTACT_ME.FORM.EMAIL_PLACEHOLDER_ERROR' | translate) : ('CONTACT_ME.FORM.EMAIL_PLACEHOLDER' | translate)" [ngClass]="{'error-placeholder': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (focus)="emailValidation = true" (blur)="emailValidation = false">
+            @if (email.touched && email.value && (emailValidation === false) && email.errors?.['pattern']) {
+              <span [ngStyle]="{'color' : '#FF3A00'}">
+                {{ 'CONTACT_ME.FORM.EMAIL_NOT_VALID' | translate }}
+              </span>
+            }
           </div>
           <hr>
           <div [ngStyle]="{padding: '1rem 1.4rem 0rem'}">
