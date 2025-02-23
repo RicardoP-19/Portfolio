@@ -8,13 +8,13 @@ section {
   background-image: url('./../../../assets/project_images_icons/background_images/background-skills.png');
   background-position: bottom;
   background-size: cover;
+  padding: 1.5rem;
 }
 
 .main {
   @include d-flex($ai: center, $g: 4rem);
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 2rem 4rem;
 }
 
 .skill-headline-wrapper {
@@ -162,7 +162,7 @@ section {
 
 @media (max-width: 940px) {
   .main {
-    padding: 2rem 1rem;
+    padding: 3rem 0rem;
   }
 
   .skill-headline-wrapper {
@@ -212,6 +212,9 @@ section {
 }
 
 @media (max-width: 680px) {
+  section {
+    padding: 1rem;
+  }
   .skill-text {
     width: 100%;
     font-size: 0.8rem;

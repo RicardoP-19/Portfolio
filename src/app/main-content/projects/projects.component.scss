@@ -3,12 +3,12 @@
 
 section {
   @include d-flex();
+  padding: 1.5rem;
 }
 
 .main {
   flex-direction: column;
   gap: 6rem;
-  padding: 2rem 4rem;
 }
 
 .project-wrapper-top {
@@ -118,6 +118,10 @@ section {
 }
 
 @media (max-width: 940px) {
+  section {
+    padding: 0;
+  }
+
   .project-wrapper-top {
     flex-direction: column;
     > div {

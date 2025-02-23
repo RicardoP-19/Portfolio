@@ -6,7 +6,7 @@ header {
   z-index: 999;
   width: 100%;
   @include d-flex($jc: center, $g: 0px);
-  padding: 1.5rem 3.5rem;
+  padding: 1.5rem;
 }
 
 .main {
