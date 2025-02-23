@@ -51,7 +51,8 @@ export class ContactMeComponent {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {            
+          next: (response) => {
+
             ngForm.resetForm();
           },
           error: (error) => {
