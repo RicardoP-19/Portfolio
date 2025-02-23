@@ -60,6 +60,7 @@
       "EMAIL_PLACEHOLDER": "youremail@email.com",
       "EMAIL_PLACEHOLDER_ERROR": "Hoppla! Ihre E-Mail ist erforderlich",
       "EMAIL_NOT_VALID": "Bitte tragen Sie eine gültige E-Mail-Adresse ein.",
+      "EMAIL_SEND_CONFIRM": "Wir haben Ihre Nachricht erhalten und melden uns in Kürze bei Ihnen!",
       "TEXTAREA": "Wie kann ich Ihnen helfen?",
       "TEXTAREA_PLACEHOLDER": "Hallo Ricardo, ich bin interessiert an...",
       "TEXTAREA_PLACEHOLDER_ERROR": "Was müssen Sie entwickeln?",
