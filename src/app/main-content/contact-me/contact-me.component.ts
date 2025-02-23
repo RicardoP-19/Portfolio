@@ -19,6 +19,7 @@ export class ContactMeComponent {
   isMobile: boolean = false;
   isChecked: boolean = false;
   reviewCheck: boolean = false;
+  emailValidation = false;
   stickerTextEn = ' Ricardo Pinto - Frontend Developer -'.split('');
   stickerTextDe = ' Ricardo Pinto - Frontend Entwickler -'.split('');  
 
