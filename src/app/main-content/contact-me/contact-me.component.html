@@ -1,3 +1,4 @@
+<app-send-confirm [sendMail]="sendMail"></app-send-confirm>
 <section>
   <div class="main">
     @if (isMobile) {
@@ -150,7 +151,7 @@
                 </svg>          
               </div>
             }
-            <button type="submit" [disabled]="!contactForm.valid || !isChecked">{{ 'CONTACT_ME.FORM.BUTTON' | translate }}</button>
+            <button (click)="sendConfirm()" type="submit" [disabled]="!contactForm.valid || !isChecked">{{ 'CONTACT_ME.FORM.BUTTON' | translate }}</button>
           </div> 
         </div>  
       </form>

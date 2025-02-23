@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 import { ResponsivService } from '../../shared/services/responsiv.service';
+import { SendConfirmComponent } from "./send-confirm/send-confirm.component";
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule, FooterComponent, TranslateModule, RouterLink],
+  imports: [CommonModule, FormsModule, FooterComponent, TranslateModule, RouterLink, SendConfirmComponent],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
@@ -20,6 +21,7 @@ export class ContactMeComponent {
   isChecked: boolean = false;
   reviewCheck: boolean = false;
   emailValidation = false;
+  sendMail = false;
   stickerTextEn = ' Ricardo Pinto - Frontend Developer -'.split('');
   stickerTextDe = ' Ricardo Pinto - Frontend Entwickler -'.split('');  
 
@@ -72,5 +74,14 @@ export class ContactMeComponent {
       this.reviewCheck = true;
     }
     this.isChecked = !this.isChecked;
+  }
+
+  sendConfirm() {
+    this.sendMail = true;
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      this.sendMail = false;
+      document.body.style.overflow = 'auto';
+    }, 1000)
   }
 }
