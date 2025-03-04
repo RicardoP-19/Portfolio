@@ -23,7 +23,7 @@ section {
   @include d-flex($jc: none, $ai: none);
 }
 
-.headine-top {
+.headline-top {
   @include d-flex($jc: end, $ai: none, $g: 1rem);
   flex-direction: column;
   flex: 1;
@@ -145,7 +145,7 @@ section {
   padding-top: 1.5rem;
 }
 
-.headine-bottom {
+.headline-bottom {
   @include d-flex($jc: end, $ai: none, $g: 0rem);
 }
 
