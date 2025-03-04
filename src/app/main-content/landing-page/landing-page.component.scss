@@ -90,6 +90,8 @@ section {
   @include d-flex($jc: none, $ai: center, $g: 0.4rem);
   > p {
     margin: 0;
+    min-width: 0.5em;
+    text-align: center;
     @include writing($fs: 7rem, $fw: 700, $c: $white);
   }
 }
