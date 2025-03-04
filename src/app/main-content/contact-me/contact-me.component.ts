@@ -50,6 +50,12 @@ export class ContactMeComponent {
     },
   };
 
+  /**
+  * Handles the form submission and sends the contact data via an HTTP POST request.
+  * Resets the form after submission or if `mailTest` is true.
+  * @param {NgForm} ngForm - The Angular form object.
+  * @function
+  */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -69,6 +75,10 @@ export class ContactMeComponent {
     }
   }
 
+  /**
+  * Toggles the checkbox state and updates the reviewCheck flag based on the checkbox status.
+  * @function
+  */
   check() {
     if (this.isChecked) {
       this.reviewCheck = true;
@@ -76,6 +86,11 @@ export class ContactMeComponent {
     this.isChecked = !this.isChecked;
   }
 
+  /**
+  * Displays a confirmation message after sending the contact form.
+  * It also disables scrolling for 1 second while the confirmation is visible.
+  * @function
+  */
   sendConfirm() {
     this.sendMail = true;
     document.body.style.overflow = 'hidden';

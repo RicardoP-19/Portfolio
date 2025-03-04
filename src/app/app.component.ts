@@ -18,6 +18,13 @@ export class AppComponent implements OnInit{
   title = 'portfolio';
   showIntro: boolean = true;
 
+  /**
+  * Angular lifecycle hook that runs when the component is initialized.
+  * It checks if the intro animation has been played before, and if so, skips the intro.
+  * Otherwise, it plays the intro and stores the status in sessionStorage.
+  * It also initializes the AOS (Animate On Scroll) library for animations.
+  * @function
+  */
   ngOnInit():void {
     const introPlayed = sessionStorage.getItem('introPlayed');
     if (introPlayed) {

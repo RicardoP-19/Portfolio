@@ -40,30 +40,52 @@ export class LandingPageComponent {
     }
   }
 
+  /**
+  * Sets the hover effect for the top section.
+  * Only applied on larger screens.
+  * @param {number} index - The index of the current hovered element.
+  */
   mouseOverTop(index: number) {
     if (!this.isMobileValue) {
       this.hoverIndexTop = index;
     }
   }
 
+  /**
+  * Resets the hover effect for the top section.
+  */
   mouseOutTop() {
     this.hoverIndexTop = null;
   }
 
+  /**
+  * Sets the hover effect for the bottom section.
+  * Only applied on larger screens.
+  * @param {number} index - The index of the current hovered element.
+  */
   mouseOverBottom(index: number) {
     if (!this.isMobileValue) {
       this.hoverIndexBottom = index;
     }
   }
 
+  /**
+  * Resets the hover effect for the bottom section.
+  */
   mouseOutBottom() {
     this.hoverIndexBottom = null;
   }
 
+  /**
+  * Activates the hover effect for the photo.
+  */
   mouseOverPhoto() {
     this.isHovered = true;
   }
 
+  /**
+  * Deactivates the hover effect for the photo.
+  */
   mouseOutPhoto() {
     this.isHovered = false;
   }

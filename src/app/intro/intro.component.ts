@@ -14,12 +14,16 @@ export class IntroComponent implements OnInit {
   isMobileValue: boolean = false;
   showIntro: boolean = true;
 
-    constructor() {
-      this.responsiveService.isMobile.subscribe(isMobile => {
-        this.isMobileValue = isMobile;
-      });
-    }
+  constructor() {
+    this.responsiveService.isMobile.subscribe(isMobile => {
+      this.isMobileValue = isMobile;
+    });
+  }
 
+  /**
+  * Initializes the component and hides the intro after a 4.5-second delay.
+  * @function
+  */
   ngOnInit(): void {
     setTimeout(() => {
       this.showIntro = false;

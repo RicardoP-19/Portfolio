@@ -18,11 +18,20 @@ export class BurgerMenuComponent {
   languageService = inject(LanguageServiceService);
   language: string = this.languageService.language;
 
+  /**
+  * Changes the language of the application and updates the current language state.
+  * @param {string} language - The language code to switch to (e.g., 'en', 'de').
+  * @function
+  */
   changeLanguage(language: string) {
     this.languageService.changeLanguage(language);
     this.language = language;
   }
 
+  /**
+  * Emits an event to close the burger menu.
+  * @function
+  */
   closeBurgerMenu(): void {
     this.closeMenu.emit();
   }
