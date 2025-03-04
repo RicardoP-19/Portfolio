@@ -86,7 +86,7 @@ section {
   visibility: hidden;
 }
 
-.headine-text {
+.headline-text {
   @include d-flex($jc: none, $ai: center, $g: 0.4rem);
   > p {
     margin: 0;
@@ -233,7 +233,7 @@ section {
 }
 
 @media (max-width: 730px) {
-  .headine-text {
+  .headline-text {
     gap: 0;
     > p {
       font-size: 6rem;
@@ -242,7 +242,7 @@ section {
 }
 
 @media (max-width: 570px) {
-  .headine-text {
+  .headline-text {
     > p {
       font-size: 4.5rem;
     }
@@ -256,7 +256,7 @@ section {
 }
 
 @media (max-width: 450px) {
-  .headine-text {
+  .headline-text {
     > p {
       font-size: 3.3rem;
     }
@@ -274,7 +274,7 @@ section {
 }
 
 @media (max-width: 380px) {
-  .headine-text {
+  .headline-text {
     > p {
       font-size: 3rem;
     }

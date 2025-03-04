@@ -18,14 +18,27 @@ export class OverlayComponent {
 
   constructor(public translate: TranslateService) {}
 
+  /**
+  * Navigates to the next project and updates the project data.
+  * @function
+  */
   nextProject() {
     this.project = this.projectService.nextProject();
   }
 
+  /**
+  * Navigates to the previous project and updates the project data.
+  * @function
+  */
   backProject() {
     this.project = this.projectService.backProject ();
   }
 
+  /**
+  * Closes the overlay and resets the displayed project.
+  * It also restores page scrolling by setting `document.body.style.overflow` to 'auto'.
+  * @function
+  */
   closeOverlay() {
     this.project = null;
     document.body.style.overflow = 'auto';

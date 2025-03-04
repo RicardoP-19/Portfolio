@@ -29,6 +29,11 @@ export class SkillsComponent {
   @ViewChild('stickerBottom') stickerText!: ElementRef;
   @ViewChild('stickerTopContent') stickerTopContent!: ElementRef;
 
+  /**
+  * Starts the animation for the top sticker and hides the top content,
+  * then reveals the bottom sticker after a delay.
+  * @function
+  */
   startAnimation(): void {
     const stickerElementTop = this.stickerTop.nativeElement;
     const stickerTopContent = this.stickerTopContent.nativeElement;
@@ -42,6 +47,10 @@ export class SkillsComponent {
     }, 500);
   }
 
+  /**
+  * Ends the animation by showing the top sticker and content, and hiding the bottom sticker.
+  * @function
+  */
   endeAnimation(): void {
     const stickerElementBottom = this.stickerText.nativeElement;
     const stickerElementTop = this.stickerTop.nativeElement;
