@@ -12,28 +12,20 @@ section {
 }
 
 .intro-wrapper-new {
-  @include d-flex($g: 4rem);
+  @include d-flex();
   flex-direction: column;
   > span {
     @include writing($fs: 6rem, $fw: 700, $c: $white);
   }
 }
 
-.roll-container {
-  position: absolute;
-  top: 8rem;
-  animation: roll-in-left 2s ease-out forwards;
-  > img {
-    width: 7.5rem;
-    animation: wobble-hor-bottom 0.8s infinite forwards;
-    animation-delay: 2.1s;
-  }
-}
-
-.welcome-text span {
+.welcome-text {
+  @include d-flex($jc: none, $ai: center);
+  > span {
   @include writing($fs: 11rem, $fw: 800, $c: $white);
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
+  }
 }
 
 .welcome-text span:nth-child(1) { animation-delay: 0s; }
@@ -43,6 +35,16 @@ section {
 .welcome-text span:nth-child(5) { animation-delay: 1.1s; }
 .welcome-text span:nth-child(6) { animation-delay: 1.4s; }
 .welcome-text span:nth-child(7) { animation-delay: 1.7s; }
+
+.roll-container {
+  position: fixed;
+  animation: roll-in-left 2s ease-out forwards;
+  > img {
+    width: 8em;
+    animation: wobble-hor-bottom 0.8s infinite forwards;
+    animation-delay: 2.1s;
+  }
+}
 
 .portfolio-text {
   @include writing($fs: 7rem, $fw:700, $c: $white)
