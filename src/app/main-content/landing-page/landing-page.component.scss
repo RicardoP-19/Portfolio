@@ -7,16 +7,16 @@ section {
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 1.5rem;
 }
 
 .main {
   flex-direction: column;
-  height: calc(100vh + 14rem);
+  padding: 4rem 1.5rem ;
 }
 
 .headline-wrapper {
   width: 53rem;
+  margin-top: 100px;
 }
 
 .headlin-content-top {
@@ -102,7 +102,7 @@ section {
 
 .polaroid {
   @include d-flex($jc: center, $ai: none, $g: 0rem);
-  background-image: url('./../../../assets/project_images_icons/polaroid/polaroid.png');
+  background-image: url('./../../../assets/project_images_icons/polaroid/profil_image_2.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -118,13 +118,6 @@ section {
     > p {
       margin: 0;
     }
-  }
-  > img {
-    position: absolute;
-    top: 15px;
-    width: 11rem;
-    height: 11rem;
-    object-fit: cover;
   }
 }
 
@@ -192,6 +185,10 @@ section {
 }
 
 @media (max-width: 940px) {
+  .main {
+    padding: 5rem 0rem ;
+  }
+
   .hello-content {
     background-size: 100% 100%;
     width: 13rem;
@@ -212,6 +209,12 @@ section {
 
   .headline-wrapper {
     width: auto;
+  }
+
+  .headline-text {
+    > p {
+      min-width: 0 !important;
+    }
   }
 
   .container-button {
