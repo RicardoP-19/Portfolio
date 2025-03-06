@@ -102,7 +102,7 @@ section {
 
 .polaroid {
   @include d-flex($jc: center, $ai: none, $g: 0rem);
-  background-image: url('./../../../assets/project_images_icons/polaroid/profil_image_2.png');
+  background-image: url('./../../../assets/project_images_icons/polaroid/profil_image.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

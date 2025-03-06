@@ -7,10 +7,12 @@
             <img class="mobile-logo" src="./../../../../../assets/project_images_icons/logo/logo_blue.png" alt="Logo">
           </a>
         </div>
-        <div>
-          <img class="mobile-menu" (click)="openBurgerMenu()" src="./../../../../../assets/project_images_icons/mobile/menu.png" alt="Menu">
+        <div class="menu" [ngClass]="{'open': burgeMenuOpen}" (click)="openBurgerMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-      </div>
+        </div>
       <app-burger-menu 
         [ngClass]="{'d-none' : !burgeMenuOpen}"
         [ngStyle]="{'width' : '100%'}"
