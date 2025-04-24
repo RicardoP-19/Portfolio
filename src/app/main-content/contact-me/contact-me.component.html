@@ -110,6 +110,7 @@
             <label for="message">{{ 'CONTACT_ME.FORM.TEXTAREA' | translate }}</label>
             <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" 
             [placeholder]="!message.valid && message.touched ? ('CONTACT_ME.FORM.TEXTAREA_PLACEHOLDER_ERROR' | translate) : ('CONTACT_ME.FORM.TEXTAREA_PLACEHOLDER' | translate)" [ngClass]="{'error-placeholder': !message.valid && message.touched}"
+            maxlength="1000"
             required></textarea>
           </div>
           <hr>
