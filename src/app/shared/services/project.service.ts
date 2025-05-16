@@ -11,24 +11,6 @@ export class ProjectService {
 
   readonly frontendProjects: Project[] = [
     {
-      title: 'Pokedex',
-      path: './assets/project_images_icons/images/pokedex.png',
-      descriptionEn: 'A Pokédex that uses the PokéAPI to retrieve and clearly display detailed information on Pokémon such as type, abilities, attacks and evolutions. Ideal for trainers and fans.',
-      descriptionDe: 'Ein Pokédex, der die PokéAPI nutzt, um detaillierte Informationen zu Pokémon wie Typ, Fähigkeiten, Attacken und Entwicklungen abzurufen und übersichtlich darzustellen. Ideal für Trainer und Fans.',
-      implementationEn:'As part of this project, I independently conceived, designed and developed a Pokédex. The web application was realized with HTML, CSS and JavaScript and uses fetch() to retrieve detailed Pokémon data from the PokéAPI in real time. Thanks to the intuitive interface, users can retrieve information such as Pokémon names, types, abilities and images. This project demonstrates my skills in independent development and modern UI design.',
-      implementationDe: 'Im Rahmen dieses Projekts habe ich eigenständig einen Pokédex konzipiert, designt und entwickelt. Die Webanwendung wurde mit HTML, CSS und JavaScript realisiert und nutzt fetch(), um in Echtzeit detaillierte Pokémon-Daten von der PokéAPI abzurufen. Dank der intuitiven Oberfläche können Nutzer Informationen wie Name, Typen, Fähigkeiten und Bilder der Pokémon abrufen. Dieses Projekt demonstriert meine Fähigkeiten in selbstständiger Entwicklung und modernem UI-Design.',
-      durationEn: '2 Weeks',
-      durationDe: '2 Wochen',
-      skills: [
-        {path: './assets/project_images_icons/icons/skills/html.png', name: 'HTML'},
-        {path: './assets/project_images_icons/icons/skills/css.png', name: 'CSS'},
-        {path: './assets/project_images_icons/icons/skills/js.png', name: 'Javascript'}
-      ],
-      gitHub: 'https://github.com/RicardoP-19/Pokedex',
-      liveTest: 'https://pokedex.ricardo-pinto.com',
-      svg: 200
-    },
-    {
       title: 'Join',
       path: './assets/project_images_icons/images/join.png',
       overlay: './assets/project_images_icons/images/join_white.png',
@@ -67,6 +49,24 @@ export class ProjectService {
       liveTest: 'https://game.ricardo-pinto.com',
       svg: 290
     },
+        {
+      title: 'Pokedex',
+      path: './assets/project_images_icons/images/pokedex.png',
+      descriptionEn: 'A Pokédex that uses the PokéAPI to retrieve and clearly display detailed information on Pokémon such as type, abilities, attacks and evolutions. Ideal for trainers and fans.',
+      descriptionDe: 'Ein Pokédex, der die PokéAPI nutzt, um detaillierte Informationen zu Pokémon wie Typ, Fähigkeiten, Attacken und Entwicklungen abzurufen und übersichtlich darzustellen. Ideal für Trainer und Fans.',
+      implementationEn:'As part of this project, I independently conceived, designed and developed a Pokédex. The web application was realized with HTML, CSS and JavaScript and uses fetch() to retrieve detailed Pokémon data from the PokéAPI in real time. Thanks to the intuitive interface, users can retrieve information such as Pokémon names, types, abilities and images. This project demonstrates my skills in independent development and modern UI design.',
+      implementationDe: 'Im Rahmen dieses Projekts habe ich eigenständig einen Pokédex konzipiert, designt und entwickelt. Die Webanwendung wurde mit HTML, CSS und JavaScript realisiert und nutzt fetch(), um in Echtzeit detaillierte Pokémon-Daten von der PokéAPI abzurufen. Dank der intuitiven Oberfläche können Nutzer Informationen wie Name, Typen, Fähigkeiten und Bilder der Pokémon abrufen. Dieses Projekt demonstriert meine Fähigkeiten in selbstständiger Entwicklung und modernem UI-Design.',
+      durationEn: '2 Weeks',
+      durationDe: '2 Wochen',
+      skills: [
+        {path: './assets/project_images_icons/icons/skills/html.png', name: 'HTML'},
+        {path: './assets/project_images_icons/icons/skills/css.png', name: 'CSS'},
+        {path: './assets/project_images_icons/icons/skills/js.png', name: 'Javascript'}
+      ],
+      gitHub: 'https://github.com/RicardoP-19/Pokedex',
+      liveTest: 'https://pokedex.ricardo-pinto.com',
+      svg: 200
+    }
   ]
 
   get projects(): Project[] {
